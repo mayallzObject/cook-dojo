@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>MEAL CARD</h1>
+  <div class="meal-card">
+    <h1>{{ meal.idMeal }}</h1>
   </div>
 </template>
 
@@ -8,9 +8,23 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "MealCard"
+  name: "MealCard",
+  props: {
+    meal: Object
+  }
 })
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.meal-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.meal-card:hover {
+  transform: scale(1.31);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
