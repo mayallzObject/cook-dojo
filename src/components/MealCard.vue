@@ -2,7 +2,7 @@
   <div>
     <router-link
       class="meal-link"
-      :to="{ name: 'Details', params: { id: meal.idMeal } }"
+      :to="{ name: 'details', params: { id: meal.idMeal } }"
     >
       <div class="meal-card ">
         <h1>{{ meal.strMeal }}</h1>

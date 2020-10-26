@@ -10,7 +10,6 @@ import MealCard from "@/components/MealCard.vue"
 import { mapState } from "vuex"
 
 export default Vue.extend({
-  name: "Home",
   components: {
     MealCard
   },

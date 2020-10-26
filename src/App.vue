@@ -1,11 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>
+    <Menu />
     <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue"
+import Menu from "@/components/Menu.vue"
+
+export default Vue.extend({
+  components: {
+    Menu
+  }
+})
+</script>
 
 <style>
 html {
@@ -23,6 +32,6 @@ body {
   box-sizing: border-box;
   width: 500px;
   padding: 0 20px 20px;
-  margin: 20px 20px;
+  margin: 0 auto;
 }
 </style>
