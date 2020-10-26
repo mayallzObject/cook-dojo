@@ -14,6 +14,9 @@ export default Vue.extend({
   components: {
     MealCard
   },
+  created() {
+    this.$store.dispatch("fetchMeals", {})
+  },
   computed: mapState(["meals"])
 })
 </script>
