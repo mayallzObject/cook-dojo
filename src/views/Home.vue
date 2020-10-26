@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <MealCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
+    <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
   </div>
 </template>
 
