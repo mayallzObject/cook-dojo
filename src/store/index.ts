@@ -15,6 +15,9 @@ export default new Vuex.Store({
     },
     SET_MEAL(state, mealID) {
       state.mealID = mealID
+    },
+    SET_RANDOM_MEAL(state, random) {
+      state.meals = random
     }
   },
   actions: {
@@ -31,6 +34,15 @@ export default new Vuex.Store({
       MealServices.getMealByID(id)
         .then(response => {
           commit("SET_MEAL", response.data.meals)
+        })
+        .catch(error => {
+          console.log("There was an error:", error.response)
+        })
+    },
+    fetchRandomMeal({ commit }) {
+      MealServices.geRandomtMeal()
+        .then(response => {
+          commit("SET_RANDOM_MEAL", response.data.meals)
         })
         .catch(error => {
           console.log("There was an error:", error.response)

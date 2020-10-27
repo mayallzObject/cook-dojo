@@ -15,5 +15,8 @@ export default {
   },
   getMealByID(id: string) {
     return apiClient.get(`/lookup.php?i=${id}`)
+  },
+  geRandomtMeal() {
+    return apiClient.get(`/random.php`)
   }
 }
