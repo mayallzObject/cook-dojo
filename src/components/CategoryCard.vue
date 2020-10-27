@@ -1,5 +1,10 @@
 <template>
   <div class="category-card">
+    <router-link
+      :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
+      tag="button"
+      >See more {{ cat.strCategory }} recepies</router-link
+    >
     <img class="img" :src="cat.strCategoryThumb" alt="Image" />
     <p>{{ cat.strCategoryDescription }}</p>
   </div>

@@ -21,5 +21,8 @@ export default {
   },
   getCategories() {
     return apiClient.get(`/categories.php`)
+  },
+  getCatMeals(names: string) {
+    return apiClient.get(`/filter.php?c=${names} `)
   }
 }

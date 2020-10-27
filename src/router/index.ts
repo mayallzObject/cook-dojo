@@ -27,6 +27,12 @@ const routes: Array<RouteConfig> = [
     component: loadView("Categories")
   },
   {
+    path: "/categories/:names",
+    name: "CatMeals",
+    component: loadView("CatMeals"),
+    props: true
+  },
+  {
     path: "/randomizer",
     name: "randomizer",
     component: loadView("Randomizer")
