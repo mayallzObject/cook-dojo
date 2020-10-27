@@ -29,9 +29,6 @@ body {
   line-height: 1.5;
 }
 #app {
-  box-sizing: border-box;
-  width: 500px;
-  padding: 0 20px 20px;
-  margin: 0 auto;
+  display: flex;
 }
 </style>
