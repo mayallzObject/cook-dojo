@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
+    <DetailsCard v-for="meal in meals" :key="meal.id" :meal="meal" />
   </div>
 </template>
 
@@ -17,6 +17,6 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("fetchMeal", this.id)
   },
-  computed: mapState(["mealID", "meals"])
+  computed: mapState(["meals"])
 })
 </script>
