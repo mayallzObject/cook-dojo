@@ -6,7 +6,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    meals: []
+    meals: [],
+    categories: []
   },
   mutations: {
     SET_MEALS(state, meals) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     },
     SET_RANDOM_MEAL(state, random) {
       state.meals = random
+    },
+    SET_CATEGORIES(state, categories) {
+      state.categories = categories
     }
   },
   actions: {
@@ -38,8 +42,17 @@ export default new Vuex.Store({
           console.log("There was an error:", error.response)
         })
     },
+    fetchCategories({ commit }) {
+      MealServices.getCategories()
+        .then(response => {
+          commit("SET_CATEGORIES", response.data.categories)
+        })
+        .catch(error => {
+          console.log("There was an error:", error.response)
+        })
+    },
     fetchRandomMeal({ commit }) {
-      MealServices.geRandomtMeal()
+      MealServices.getRandomtMeal()
         .then(response => {
           commit("SET_RANDOM_MEAL", response.data.meals)
         })

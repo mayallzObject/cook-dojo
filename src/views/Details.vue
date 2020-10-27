@@ -10,6 +10,7 @@ import { mapState } from "vuex"
 import DetailsCard from "@/components/DetailsCard.vue"
 
 export default Vue.extend({
+  name: "Details",
   props: ["id"],
   components: {
     DetailsCard
