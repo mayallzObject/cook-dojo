@@ -13,7 +13,7 @@ import { mapState } from "vuex"
 import MealCard from "@/components/MealCard.vue"
 
 export default Vue.extend({
-  name: "Random",
+  name: "Randomizer",
   components: {
     MealCard
   },
