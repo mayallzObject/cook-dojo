@@ -1,6 +1,5 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
-import Details from "@/views/Details.vue"
 
 Vue.use(VueRouter)
 
@@ -13,14 +12,24 @@ function loadView(view: string) {
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: loadView("Home")
   },
   {
     path: "/details/:id",
-    name: "Details",
+    name: "details",
     component: loadView("Details"),
     props: true
+  },
+  {
+    path: "/categories",
+    name: "categories",
+    component: loadView("Categories")
+  },
+  {
+    path: "/randomizer",
+    name: "randomizer",
+    component: loadView("Randomizer")
   }
 ]
 
