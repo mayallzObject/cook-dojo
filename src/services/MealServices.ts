@@ -11,7 +11,7 @@ const apiClient = axios.create({
 
 export default {
   getMeals() {
-    return apiClient.get("/latest.php")
+    return apiClient.get(`/latest.php?_page=7`)
   },
   getMealByID(id: string) {
     return apiClient.get(`/lookup.php?i=${id}`)
@@ -23,6 +23,6 @@ export default {
     return apiClient.get(`/categories.php`)
   },
   getCatMeals(names: string) {
-    return apiClient.get(`/filter.php?c=${names} `)
+    return apiClient.get(`/filter.php?c=${names}`)
   }
 }

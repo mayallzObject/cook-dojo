@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>
+    <button class="flex-container">
       <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
-    </div>
+    </button>
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
@@ -22,7 +22,9 @@ export default Vue.extend({
     CatButton
   },
   created() {
-    this.$store.dispatch("fetchMeals", {})
+    this.$store.dispatch("fetchMeals", {
+      perPage: 3
+    })
     this.$store.dispatch("fetchCategories", {})
   },
   computed: mapState(["meals", "categories"])

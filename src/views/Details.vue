@@ -5,7 +5,11 @@
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
     <div>
-      <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
+      <DetailsCard
+        v-for="meal in meals.slice(1, 4)"
+        :key="meal.id"
+        :meal="meal"
+      />
     </div>
   </div>
 </template>
@@ -14,14 +18,17 @@
 import Vue from "vue"
 import { mapState } from "vuex"
 import DetailsCard from "@/components/DetailsCard.vue"
-import MealCard from "@/components/MealCard.vue"
 
 export default Vue.extend({
   name: "Details",
   props: ["id", "names"],
   components: {
-    DetailsCard,
-    MealCard
+    DetailsCard
+  },
+  data() {
+    return {
+      limitationList: 5
+    }
   },
   created() {
     this.$store.dispatch("fetchMeal", this.id)
