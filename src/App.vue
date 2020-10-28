@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Menu />
+    <div>
+      <Menu />
+    </div>
     <router-view />
   </div>
 </template>
@@ -23,7 +25,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  margin: 0;
+  margin: 20px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;

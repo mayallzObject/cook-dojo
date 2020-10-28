@@ -3,13 +3,9 @@
     <nav>
       <div class="nav-link">
         <router-link :to="{ name: 'home' }" tag="button">Home</router-link>
-      </div>
-      <div class="nav-link">
         <router-link :to="{ name: 'randomizer' }" tag="button"
           >Random</router-link
         >
-      </div>
-      <div class="nav-link">
         <router-link :to="{ name: 'categories' }" tag="button"
           >Categories</router-link
         >
@@ -28,15 +24,19 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
-  width: 20%;
-  height: 100vh auto;
-  background-color: #192a56;
+  background-color: #333;
+  position: fixed;
+  z-index: 999;
   top: 0;
-  position: sticky;
+  margin-bottom: 20px;
 }
 .nav-link {
-  margin-top: 20px;
-  background-color: #192a56;
-  color: #fff;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 </style>

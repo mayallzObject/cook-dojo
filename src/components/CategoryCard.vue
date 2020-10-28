@@ -23,6 +23,8 @@ export default Vue.extend({
 
 <style scoped>
 .category-card {
+  display: block;
+  width: 400px;
   padding: 20px;
   margin-bottom: 20px;
   transition: all 0.2s linear;

@@ -23,5 +23,3 @@ export default Vue.extend({
   computed: mapState(["meals"])
 })
 </script>
-
-<style scoped></style>

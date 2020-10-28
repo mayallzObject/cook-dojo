@@ -3,7 +3,7 @@
     <div>
       <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
     </div>
-    <div class="home">
+    <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
   </div>
@@ -28,3 +28,16 @@ export default Vue.extend({
   computed: mapState(["meals", "categories"])
 })
 </script>
+
+<style scope>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 500px;
+  text-align: center;
+}
+</style>

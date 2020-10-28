@@ -5,7 +5,7 @@
       :to="{ name: 'details', params: { id: meal.idMeal } }"
     >
       <div class="meal-card ">
-        <h5>{{ meal.strMeal }}</h5>
+        <h3>{{ meal.strMeal }}</h3>
         <img class="img" :src="meal.strMealThumb" alt="Image" />
         <h6>See details</h6>
       </div>
