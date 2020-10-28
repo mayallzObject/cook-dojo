@@ -27,6 +27,11 @@ export default Vue.extend({
     this.$store.dispatch("fetchMeal", this.id)
     this.$store.dispatch("fetchMeals")
   },
-  computed: mapState(["mealID", "meals"])
+  computed: {
+    mealRelation() {
+      return this.$store.state.categories
+    },
+    ...mapState(["mealID", "meals", "categories"])
+  }
 })
 </script>

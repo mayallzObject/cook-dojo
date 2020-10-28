@@ -1,19 +1,24 @@
 <template>
-  <div id="app">
-    <div>
-      <Menu />
+  <div>
+    <div id="app">
+      <div>
+        <Menu />
+      </div>
+      <router-view />
+      <Footer />
     </div>
-    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
 import Menu from "@/components/Menu.vue"
+import Footer from "@/components/Footer.vue"
 
 export default Vue.extend({
   components: {
-    Menu
+    Menu,
+    Footer
   }
 })
 </script>
@@ -31,6 +36,5 @@ body {
   line-height: 1.5;
 }
 #app {
-  display: flex;
 }
 </style>

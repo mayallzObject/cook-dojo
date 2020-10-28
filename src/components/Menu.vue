@@ -29,6 +29,7 @@ export default Vue.extend({
   z-index: 999;
   top: 0;
   margin-bottom: 20px;
+  overflow: visible;
 }
 .nav-link {
   float: left;

@@ -27,8 +27,6 @@ export default Vue.extend({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .meal-card {
-  padding: 20px;
-  margin-bottom: 20px;
   transition: all 0.2s linear;
   cursor: pointer;
 }

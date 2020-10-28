@@ -77,8 +77,8 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    doneTodos: state => {
-      return state.meals.sort(meal => meal)
+    catLength: state => {
+      return state.mealsCat.length
     }
   },
   modules: {}

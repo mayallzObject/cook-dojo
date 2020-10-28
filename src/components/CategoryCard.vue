@@ -23,8 +23,6 @@ export default Vue.extend({
 
 <style scoped>
 .category-card {
-  padding: 20px;
-  margin-bottom: 20px;
   transition: all 0.2s linear;
   cursor: pointer;
 }
