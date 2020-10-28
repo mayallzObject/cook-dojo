@@ -1,6 +1,6 @@
 <template>
   <div class="flex-container">
-    <CategoryCard v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
+    <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
   </div>
 </template>
 

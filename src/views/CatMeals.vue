@@ -1,8 +1,8 @@
 <template>
   <div>
     <h5>{{ names }}</h5>
-    <p>{{ mealsCat.length }}</p>
-    <MealCard v-for="meal in mealsCat" :key="meal.idMeal" :meal="meal" />
+    <p>We have {{ mealsCat.length }} delicious meals in this category</p>
+    <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
   </div>
 </template>
 

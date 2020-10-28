@@ -1,7 +1,7 @@
 <template>
   <div class="randomizer">
-    <MealCard v-for="meal in mealRandom" :key="meal.idMeal" :meal="meal" />
-    <button @click.prevent="$store.dispatch('fetchRandomMeal', meals)">
+    <MealCard v-for="meal in mealRandom" :key="meal.id" :meal="meal" />
+    <button @click.prevent="$store.dispatch('fetchRandomMeal')">
       Random
     </button>
   </div>
