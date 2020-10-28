@@ -3,9 +3,6 @@
     <div>
       <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
     </div>
-    <select name="categories" id="a">
-      <option value="meals"> {{ meals.idMeal }}</option>
-    </select>
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>

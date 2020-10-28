@@ -2,7 +2,9 @@
   <div>
     <h5>{{ names }}</h5>
     <p>We have {{ mealsCat.length }} delicious meals in this category</p>
-    <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
+    <div class="flex-container">
+      <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
+    </div>
   </div>
 </template>
 
@@ -24,4 +26,15 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 500px;
+  text-align: center;
+}
+</style>
