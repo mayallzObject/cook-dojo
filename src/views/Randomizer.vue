@@ -1,6 +1,6 @@
 <template>
   <div class="randomizer">
-    <MealCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
+    <MealCard v-for="meal in mealRandom" :key="meal.idMeal" :meal="meal" />
     <button @click.prevent="$store.dispatch('fetchRandomMeal', meals)">
       Random
     </button>
@@ -20,6 +20,6 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("fetchRandomMeal")
   },
-  computed: mapState(["meals"])
+  computed: mapState(["mealRandom"])
 })
 </script>
