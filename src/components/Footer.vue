@@ -1,6 +1,20 @@
 <template>
   <div class="footer">
-    <h1>Foooter</h1>
+    <div>
+      <router-link class="footer-link" :to="{ name: 'home' }">
+        Homepage
+      </router-link>
+    </div>
+    <div>
+      <router-link class="footer-link" :to="{ name: 'categories' }">
+        Categories
+      </router-link>
+    </div>
+    <div>
+      <router-link class="footer-link" :to="{ name: 'randomizer' }">
+        randomizercategories
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -8,17 +22,21 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "Footer"
+  name: "Footer",
+  props: [""]
 })
 </script>
 <style scoped>
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: red;
   color: white;
-  text-align: center;
+}
+.footer-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>

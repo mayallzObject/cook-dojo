@@ -28,12 +28,11 @@ export default Vue.extend({
   position: fixed;
   z-index: 999;
   top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
   overflow: visible;
 }
 .nav-link {
-  float: left;
-  display: block;
+  display: flex;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;

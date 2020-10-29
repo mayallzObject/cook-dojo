@@ -36,5 +36,9 @@ body {
   line-height: 1.5;
 }
 #app {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
 }
 </style>
