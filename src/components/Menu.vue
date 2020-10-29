@@ -24,12 +24,12 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
+  width: 100%;
   background-color: #333;
   position: fixed;
   z-index: 999;
   top: 0;
   margin-bottom: 120px;
-  overflow: visible;
 }
 .nav-link {
   display: flex;
