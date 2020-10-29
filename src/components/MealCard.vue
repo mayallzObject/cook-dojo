@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <router-link
-      class="meal-link"
-      :to="{ name: 'details', params: { id: meal.idMeal } }"
-    >
-      <div class="meal-card ">
-        <h5>{{ meal.strMeal }}</h5>
-        <img class="img" :src="meal.strMealThumb" alt="Image" />
-        <h6>See details</h6>
-      </div>
-    </router-link>
-  </div>
+  <router-link
+    class="meal-link"
+    :to="{ name: 'details', params: { id: meal.idMeal } }"
+  >
+    <div class="meal-card ">
+      <h4>{{ meal.strMeal }}</h4>
+      <img class="img" :src="meal.strMealThumb" alt="Image" />
+      <h6>See details</h6>
+    </div>
+  </router-link>
 </template>
 
 <script lang="ts">
@@ -27,8 +25,10 @@ export default Vue.extend({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .meal-card {
+  align-items: center;
+  width: 300px;
+  margin: 20px;
   padding: 20px;
-  margin-bottom: 20px;
   transition: all 0.2s linear;
   cursor: pointer;
 }
@@ -42,6 +42,7 @@ export default Vue.extend({
   font-weight: bold;
 }
 .img {
+  align-items: content-center;
   width: 170px;
   height: 170px;
 }

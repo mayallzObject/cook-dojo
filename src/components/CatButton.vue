@@ -1,10 +1,10 @@
 <template>
-  <div class="cat-button">
+  <div class="flex-container">
     <router-link
       :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
       tag="button"
-      >{{ cat.strCategory }}</router-link
-    >
+      >{{ cat.strCategory }}
+    </router-link>
   </div>
 </template>
 
@@ -18,5 +18,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style scoped></style>

@@ -11,7 +11,8 @@ import Vue from "vue"
 export default Vue.extend({
   name: "DetailsCard",
   props: {
-    meal: Object
+    meal: Object,
+    cat: Object
   }
 })
 </script>

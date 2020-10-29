@@ -1,12 +1,12 @@
 <template>
   <div class="category-card">
+    <img class="img" :src="cat.strCategoryThumb" alt="Image" />
+    <p>{{ cat.strCategoryDescription }}</p>
     <router-link
       :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
       tag="button"
       >See more {{ cat.strCategory }} recepies</router-link
     >
-    <img class="img" :src="cat.strCategoryThumb" alt="Image" />
-    <p>{{ cat.strCategoryDescription }}</p>
   </div>
 </template>
 
@@ -23,8 +23,6 @@ export default Vue.extend({
 
 <style scoped>
 .category-card {
-  padding: 20px;
-  margin-bottom: 20px;
   transition: all 0.2s linear;
   cursor: pointer;
 }

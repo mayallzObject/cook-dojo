@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <CategoryCard v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
+  <div class="flex-container">
+    <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
   </div>
 </template>
 
@@ -21,4 +21,15 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped></style>
+<style scope>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 500px;
+  text-align: center;
+}
+</style>

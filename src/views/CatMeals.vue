@@ -1,7 +1,10 @@
 <template>
   <div>
     <h5>{{ names }}</h5>
-    <MealCard v-for="meal in mealsCat" :key="meal.idMeal" :meal="meal" />
+    <p>We have {{ catLength }} delicious meals in this category</p>
+    <div class="flex-container">
+      <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
+    </div>
   </div>
 </template>
 
@@ -18,9 +21,26 @@ export default Vue.extend({
   },
   created() {
     this.$store.dispatch("fetchMealByCat", this.names)
+    this.$store.dispatch("fetchCategories")
   },
-  computed: mapState(["mealsCat"])
+  computed: {
+    catLength() {
+      return this.$store.getters.catLength
+    },
+    ...mapState(["mealsCat", "categories"])
+  }
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 500px;
+  text-align: center;
+}
+</style>

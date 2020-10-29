@@ -1,9 +1,13 @@
 <template>
-  <div class="randomizer">
-    <MealCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
-    <button @click.prevent="$store.dispatch('fetchRandomMeal', meals)">
-      Random
-    </button>
+  <div>
+    <div class="flex-container">
+      <MealCard v-for="meal in mealRandom" :key="meal.id" :meal="meal" />
+    </div>
+    <div>
+      <button @click.prevent="$store.dispatch('fetchRandomMeal')">
+        Random
+      </button>
+    </div>
   </div>
 </template>
 
@@ -20,8 +24,19 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("fetchRandomMeal")
   },
-  computed: mapState(["meals"])
+  computed: mapState(["mealRandom"])
 })
 </script>
 
-<style scoped></style>
+<style scope>
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container > div {
+  width: 500px;
+  text-align: center;
+}
+</style>

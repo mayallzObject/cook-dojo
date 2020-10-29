@@ -7,6 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     meals: [],
+    mealID: [],
+    mealRandom: [],
     categories: [],
     mealsCat: []
   },
@@ -15,10 +17,10 @@ export default new Vuex.Store({
       state.meals = meals
     },
     SET_MEAL_ID(state, mealID) {
-      state.meals = mealID
+      state.mealID = mealID
     },
-    SET_RANDOM_MEAL(state, random) {
-      state.meals = random
+    SET_RANDOM_MEAL(state, mealRandom) {
+      state.mealRandom = mealRandom
     },
     SET_CATEGORIES(state, categories) {
       state.categories = categories
@@ -72,6 +74,11 @@ export default new Vuex.Store({
         .catch(error => {
           console.log("There was an error:", error.response)
         })
+    }
+  },
+  getters: {
+    catLength: state => {
+      return state.mealsCat.length
     }
   },
   modules: {}
