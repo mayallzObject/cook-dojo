@@ -12,7 +12,7 @@
     </div>
     <div>
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
-        randomizercategories
+        Randomizer
       </router-link>
     </div>
   </div>
@@ -29,6 +29,7 @@ export default Vue.extend({
 <style scoped>
 .footer {
   width: 100%;
+  z-index: 999;
   position: fixed;
   bottom: 0;
   background-color: red;

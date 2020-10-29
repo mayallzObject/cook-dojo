@@ -1,8 +1,6 @@
 <template>
   <div>
-    <button class="flex-container">
-      <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
-    </button>
+    <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
@@ -39,7 +37,7 @@ export default Vue.extend({
 }
 
 .flex-container > div {
-  width: 500px;
+  width: 1500px;
   text-align: center;
 }
 </style>
