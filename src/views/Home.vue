@@ -1,10 +1,15 @@
 <template>
-  <div class="flex-container">
-    <div class="cat-button">
-      <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
+  <div>
+    <div class="ooo">
+      <div class="btn-group">
+        <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
+      </div>
+      <div></div>
+      <h1>Latest Meals:</h1>
     </div>
+
     <div class="flex-container">
-      <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
+      <MealCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
     </div>
   </div>
 </template>
@@ -39,8 +44,8 @@ export default Vue.extend({
   width: 100%;
   text-align: center;
 }
-.cat-button {
-  margin-top: 3rem;
+.btn-group button {
+  margin: 5px;
   background-color: #4caf50; /* Green background */
   border: 1px solid green; /* Green border */
   color: white; /* White text */
@@ -48,7 +53,23 @@ export default Vue.extend({
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 }
-.cat-button:hover {
-  margin-top: 3rem;
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+.ooo {
+  background-image: "hello.jpg";
 }
 </style>

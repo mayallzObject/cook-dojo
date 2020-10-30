@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div>
-      <Menu />
-    </div>
+    <Menu />
     <Footer />
     <router-view />
   </div>
@@ -28,7 +26,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  margin: 0;
+  margin: 70px 0 100px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -38,6 +36,7 @@ body {
   box-sizing: border-box;
   align-content: center;
   padding: 0;
+  text-align: center;
 }
 hr {
   box-sizing: content-box;
@@ -48,10 +47,6 @@ a {
   color: #39b982;
   font-weight: 600;
   background-color: transparent;
-}
-img {
-  border-style: none;
-  width: 100%;
 }
 h1,
 h2,

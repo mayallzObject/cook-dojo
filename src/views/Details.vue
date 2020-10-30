@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ names }}</h1>
+    <h1>{{ mealsCat }}</h1>
     <div>
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
@@ -10,6 +10,7 @@
         :key="meal.id"
         :meal="meal"
       />
+      <h1>{{ categories }}</h1>
     </div>
   </div>
 </template>
@@ -33,12 +34,9 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("fetchMeal", this.id)
     this.$store.dispatch("fetchMeals")
+    this.$store.dispatch("fetchCategories")
+    this.$store.dispatch("fetchMealByCat", this.names)
   },
-  computed: {
-    mealRelation() {
-      return this.$store.state.categories
-    },
-    ...mapState(["mealID", "meals", "categories"])
-  }
+  computed: mapState(["mealID", "meals", "categories", "mealsCat"])
 })
 </script>

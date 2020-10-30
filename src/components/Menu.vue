@@ -29,7 +29,6 @@ export default Vue.extend({
   position: fixed;
   z-index: 999;
   top: 0;
-  margin-bottom: 120px;
 }
 .nav-link {
   display: flex;

@@ -3,7 +3,10 @@
     <img class="img" :src="cat.strCategoryThumb" alt="Image" />
     <p>{{ cat.strCategoryDescription }}</p>
     <router-link
-      :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
+      :to="{
+        name: 'catMeals',
+        params: { names: cat.strCategory }
+      }"
       tag="button"
       >See more {{ cat.strCategory }} recepies</router-link
     >

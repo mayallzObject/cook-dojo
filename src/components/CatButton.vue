@@ -1,7 +1,7 @@
 <template>
   <div class="flex-container">
     <router-link
-      :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
+      :to="{ name: 'catMeals', params: { names: cat.strCategory } }"
       tag="button"
       >{{ cat.strCategory }}
     </router-link>
