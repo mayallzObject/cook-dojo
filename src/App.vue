@@ -44,6 +44,64 @@ body {
   margin-top: 100px;
   text-align: center;
 }
+.header {
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-container > div {
+  text-align: center;
+}
+.btn-group button {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  background-image: linear-gradient(green, #4caf50, yellowgreen);
+  border: 1px solid green;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group button:hover {
+  background-image: linear-gradient(yellowgreen, #4caf50);
+}
+.header {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.button {
+  margin: 1px;
+  background-color: #21d190;
+  background-image: linear-gradient(315deg, #21d190 0%, #d65bca 74%);
+  border: 1px solid green;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+.button:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.button:hover {
+  background-image: linear-gradient(yellowgreen, #4caf50);
+}
 hr {
   box-sizing: content-box;
   height: 0;

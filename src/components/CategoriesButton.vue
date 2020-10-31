@@ -16,11 +16,11 @@ export default Vue.extend({
 
 <style scoped>
 .categories-button {
-  text-align: center;
-  padding: 100px;
-  border-radius: 50%;
-  transition: all 0.2s linear;
-  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #555;
+  border-bottom: 25px solid transparent;
 }
 .categories-button:hover {
   transform: scale(1.01);

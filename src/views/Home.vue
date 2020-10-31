@@ -1,21 +1,14 @@
 <template>
   <div>
     <button class="button" v-on:click="show = !show">
-      Toggle
+      Find meals by in category
     </button>
     <div v-if="show" class="btn-group">
       <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
     </div>
     <div class="header">Latest Meals</div>
-    <select name="" id="">
-      <option value=""> Hallo</option>
-    </select>
     <div class="flex-container">
-      <MealCard
-        v-for="meal in sortedTodos(strMeal)"
-        :key="meal.strMeal"
-        :meal="meal"
-      />
+      <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
   </div>
 </template>
@@ -46,41 +39,3 @@ export default Vue.extend({
   methods: {}
 })
 </script>
-
-<style scope>
-.header {
-  text-align: center;
-}
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.flex-container > div {
-  text-align: center;
-}
-.btn-group button {
-  margin: 1px;
-  background-color: #4caf50;
-  border: 1px solid green;
-  color: white;
-  padding: 10px 24px;
-  cursor: pointer;
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-</style>
