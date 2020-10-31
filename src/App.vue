@@ -32,18 +32,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  height: 100vh;
-  flex-direction: column;
+  width: 100% auto;
   margin: 0 auto;
-  padding: 0 auto;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 #app {
-  margin-top: 100px;
+  display: flex;
+  margin-top: 200px;
   text-align: center;
 }
+
 .header {
   text-align: center;
 }
@@ -58,8 +58,9 @@ body {
 .btn-group button {
   margin-left: 5px;
   font-weight: bold;
-  font-size: 12px;
-  background-image: linear-gradient(#4caf50, yellowgreen);
+  font-size: 10px;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
   color: white;
   padding: 10px 24px;
@@ -74,10 +75,11 @@ body {
 }
 
 .btn-group button:hover {
-  background-image: linear-gradient(yellowgreen, #4caf50);
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
 }
 .header {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -85,8 +87,8 @@ body {
   font-weight: bold;
   font-size: 20px;
   margin: 1px;
-  background-color: #63d471;
-  background-image: linear-gradient(160deg, #233329 0%, #63d471 74%);
+  background-color: #99201c;
+  background-image: linear-gradient(360deg, #99201c 0%, #f56545 74%);
   border: 1px solid green;
   color: white;
   padding: 10px 24px;
@@ -95,12 +97,17 @@ body {
 .button:after {
   content: "";
   clear: both;
-  display: table;
 }
 .button:hover {
-  background-color: #63d471;
-  background-image: linear-gradient(320deg, #233329 0%, #63d471 74%);
+  background-color: #aff6cf;
+  background-image: linear-gradient(
+    360deg,
+    #aff6cf 0%,
+    #9f98e8 14%,
+    #aff6cf 99%
+  );
 }
+
 hr {
   box-sizing: content-box;
   height: 0;

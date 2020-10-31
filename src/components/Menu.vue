@@ -34,7 +34,6 @@ export default Vue.extend({
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
 }
 .btn-group button {
-  margin-left: 5px;
   font-weight: bold;
   font-size: 12px;
   background-color: #63d471;

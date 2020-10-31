@@ -29,21 +29,19 @@ export default Vue.extend({
 <style scoped>
 .meal-card {
   align-items: center;
-  /* background-image: linear-gradient(#4caf50, yellowgreen, #4caf50); */
-  background-color: #deebdd;
-  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
-  width: 400px;
+  color: #fff;
+  background-image: linear-gradient(90deg, #63d471, #233329, #63d471);
+  width: 300px;
   margin: 15px;
-  padding: 40px;
+  padding: 20px;
   transition: all 0.4s linear;
   cursor: pointer;
 }
 .meal-card:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  background-color: green;
-  background-image: linear-gradient(315deg, yellowgreen 0%, #4caf50 74%);
-  color: white;
+  color: #fff;
+  background-image: linear-gradient(360deg, #233329, #63d471, #233329);
 }
 .meal-link {
   color: black;

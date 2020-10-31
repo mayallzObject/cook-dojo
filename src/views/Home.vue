@@ -3,7 +3,7 @@
     <button class="button" v-on:click="show = !show">
       Find meals by in category
     </button>
-    <div v-if="show" class="btn-group">
+    <div v-if="show" id="box" class="btn-group">
       <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
     </div>
     <div>Latest Meals</div>
