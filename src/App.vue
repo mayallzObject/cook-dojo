@@ -59,7 +59,7 @@ body {
   margin-left: 5px;
   font-weight: bold;
   font-size: 12px;
-  background-image: linear-gradient(green, #4caf50, yellowgreen);
+  background-image: linear-gradient(#4caf50, yellowgreen);
   border: 1px solid green;
   color: white;
   padding: 10px 24px;
@@ -73,10 +73,6 @@ body {
   display: table;
 }
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
 .btn-group button:hover {
   background-image: linear-gradient(yellowgreen, #4caf50);
 }
@@ -86,9 +82,11 @@ body {
 }
 
 .button {
+  font-weight: bold;
+  font-size: 20px;
   margin: 1px;
-  background-color: #21d190;
-  background-image: linear-gradient(315deg, #21d190 0%, #d65bca 74%);
+  background-color: #63d471;
+  background-image: linear-gradient(160deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
   color: white;
   padding: 10px 24px;
@@ -100,7 +98,8 @@ body {
   display: table;
 }
 .button:hover {
-  background-image: linear-gradient(yellowgreen, #4caf50);
+  background-color: #63d471;
+  background-image: linear-gradient(320deg, #233329 0%, #63d471 74%);
 }
 hr {
   box-sizing: content-box;

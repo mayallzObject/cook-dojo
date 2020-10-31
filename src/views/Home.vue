@@ -6,7 +6,7 @@
     <div v-if="show" class="btn-group">
       <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
     </div>
-    <div class="header">Latest Meals</div>
+    <div>Latest Meals</div>
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
