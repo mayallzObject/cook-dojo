@@ -1,8 +1,14 @@
 <template>
-  <div id="app">
-    <Menu />
-    <Footer />
-    <router-view />
+  <div>
+    <div id="app">
+      <div>
+        <Menu />
+        <router-view />
+      </div>
+    </div>
+    <div>
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -26,16 +32,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  margin: 70px 0 100px;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 auto;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 #app {
-  display: flex-box;
-  box-sizing: border-box;
-  align-content: center;
-  padding: 0;
+  margin-top: 100px;
   text-align: center;
 }
 hr {

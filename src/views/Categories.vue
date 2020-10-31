@@ -14,6 +14,12 @@ export default Vue.extend({
   components: {
     CategoryCard
   },
+  data() {
+    return {
+      tabs: ["Reviews", "Make a Review"],
+      selectedTab: "Reviews"
+    }
+  },
   created() {
     this.$store.dispatch("fetchCategories", {})
   },

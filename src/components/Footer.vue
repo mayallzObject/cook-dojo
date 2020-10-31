@@ -28,15 +28,13 @@ export default Vue.extend({
 </script>
 <style scoped>
 .footer {
-  width: 100%;
-  z-index: 999;
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  background-color: red;
-  color: white;
+  background-color: black;
+  text-align: center;
 }
 .footer-link {
-  color: black;
+  color: sandybrown;
   text-decoration: none;
   font-weight: bold;
 }
