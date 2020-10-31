@@ -1,6 +1,15 @@
 <template>
   <div>
-    <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
+    <div>
+      <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
+    </div>
+    <div>
+      <DetailsCard
+        v-for="meal in randomMeals.slice(1, 4)"
+        :key="meal.id"
+        :meal="meal"
+      />
+    </div>
   </div>
 </template>
 
@@ -11,22 +20,18 @@ import DetailsCard from "@/components/DetailsCard.vue"
 
 export default Vue.extend({
   name: "Details",
-  props: ["id"],
+  props: ["id", "names"],
   components: {
     DetailsCard
-  },
-  data() {
-    return {
-      limitationList: 5
-    }
   },
   created() {
     this.$store.dispatch("fetchMeal", this.id)
     this.$store.dispatch("fetchMeals")
+    this.$store.dispatch("fetchMealsRandom")
   },
   computed: {
-    ...mapGetters(["getByCategory"]),
-    ...mapState(["mealID", "meals"])
+    ...mapGetters(["sortCategory", "sortID"]),
+    ...mapState(["mealID", "meals", "randomMeals"])
   }
 })
 </script>

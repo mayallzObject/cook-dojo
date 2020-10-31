@@ -6,9 +6,16 @@
     <div v-if="show" class="btn-group">
       <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
     </div>
-    <h1 class="header">Latest Meals</h1>
+    <div class="header">Latest Meals</div>
+    <select name="" id="">
+      <option value=""> Hallo</option>
+    </select>
     <div class="flex-container">
-      <MealCard v-for="meal in meals" :key="meal.idMeal" :meal="meal" />
+      <MealCard
+        v-for="meal in sortedTodos(strMeal)"
+        :key="meal.strMeal"
+        :meal="meal"
+      />
     </div>
   </div>
 </template>
@@ -17,7 +24,7 @@
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
 import CatButton from "@/components/CatButton.vue"
-import { mapState } from "vuex"
+import { mapGetters, mapState } from "vuex"
 
 export default Vue.extend({
   name: "Home",
@@ -32,7 +39,11 @@ export default Vue.extend({
     this.$store.dispatch("fetchMeals", {})
     this.$store.dispatch("fetchCategories", {})
   },
-  computed: mapState(["meals", "categories"])
+  computed: {
+    ...mapGetters(["sortedTodos"]),
+    ...mapState(["meals", "categories"])
+  },
+  methods: {}
 })
 </script>
 
