@@ -1,6 +1,13 @@
 <template>
   <div>
-    <CatButton v-for="cat in categories" :key="cat.id" :cat="cat" />
+    <button class="button" v-on:click="show = !show">
+      Filter by category
+    </button>
+    <div>All categories</div>
+    <div v-if="show" class="btn-group">
+      <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
+    </div>
+    <h1>Latest Meals</h1>
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
@@ -11,7 +18,7 @@
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
 import CatButton from "@/components/CatButton.vue"
-import { mapState } from "vuex"
+import { mapGetters, mapState } from "vuex"
 
 export default Vue.extend({
   name: "Home",
@@ -19,25 +26,17 @@ export default Vue.extend({
     MealCard,
     CatButton
   },
+  data() {
+    return { show: false }
+  },
   created() {
-    this.$store.dispatch("fetchMeals", {
-      perPage: 3
-    })
+    this.$store.dispatch("fetchMeals", {})
     this.$store.dispatch("fetchCategories", {})
   },
-  computed: mapState(["meals", "categories"])
+  computed: {
+    ...mapGetters(["sortedTodos"]),
+    ...mapState(["meals", "categories"])
+  },
+  methods: {}
 })
 </script>
-
-<style scope>
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.flex-container > div {
-  width: 1500px;
-  text-align: center;
-}
-</style>

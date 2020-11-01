@@ -1,7 +1,10 @@
 <template>
   <div>
     <h5>{{ names }}</h5>
-    <p>We have {{ catLength }} delicious meals in this category</p>
+    <div>
+      <CategoriesButton />
+    </div>
+
     <div class="flex-container">
       <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
     </div>
@@ -11,22 +14,22 @@
 <script lang="ts">
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
-import { mapState } from "vuex"
+import CategoriesButton from "@/components/CategoriesButton.vue"
+import { mapState, mapGetters } from "vuex"
 
 export default Vue.extend({
   props: ["names"],
   name: "CatMeals",
   components: {
-    MealCard
+    MealCard,
+    CategoriesButton
   },
   created() {
     this.$store.dispatch("fetchMealByCat", this.names)
     this.$store.dispatch("fetchCategories")
   },
   computed: {
-    catLength() {
-      return this.$store.getters.catLength
-    },
+    ...mapGetters(["catLength"]),
     ...mapState(["mealsCat", "categories"])
   }
 })

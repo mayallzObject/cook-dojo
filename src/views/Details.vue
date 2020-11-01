@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h1>{{ names }}</h1>
     <div>
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
     <div>
       <DetailsCard
-        v-for="meal in meals.slice(1, 4)"
+        v-for="meal in randomMeals.slice(1, 4)"
         :key="meal.id"
         :meal="meal"
       />
@@ -16,7 +15,7 @@
 
 <script lang="ts">
 import Vue from "vue"
-import { mapState } from "vuex"
+import { mapState, mapGetters } from "vuex"
 import DetailsCard from "@/components/DetailsCard.vue"
 
 export default Vue.extend({
@@ -25,20 +24,14 @@ export default Vue.extend({
   components: {
     DetailsCard
   },
-  data() {
-    return {
-      limitationList: 5
-    }
-  },
   created() {
     this.$store.dispatch("fetchMeal", this.id)
     this.$store.dispatch("fetchMeals")
+    this.$store.dispatch("fetchMealsRandom")
   },
   computed: {
-    mealRelation() {
-      return this.$store.state.categories
-    },
-    ...mapState(["mealID", "meals", "categories"])
+    ...mapGetters(["sortCategory", "sortID"]),
+    ...mapState(["mealID", "meals", "randomMeals"])
   }
 })
 </script>

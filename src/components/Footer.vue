@@ -1,18 +1,16 @@
 <template>
   <div class="footer">
-    <div>
+    <div class="flex-container">
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
     </div>
     <div>
-      <router-link class="footer-link" :to="{ name: 'categories' }">
-        Categories
-      </router-link>
-    </div>
-    <div>
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
         Randomizer
+      </router-link>
+      <router-link class="footer-link" :to="{ name: 'randomizer' }">
+        categories
       </router-link>
     </div>
   </div>
@@ -22,21 +20,22 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "Footer",
-  props: [""]
+  name: "Footer"
 })
 </script>
+
 <style scoped>
 .footer {
-  width: 100%;
+  display: block;
   z-index: 999;
-  position: fixed;
+  position: sticky;
   bottom: 0;
-  background-color: red;
-  color: white;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  text-align: center;
 }
 .footer-link {
-  color: black;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }

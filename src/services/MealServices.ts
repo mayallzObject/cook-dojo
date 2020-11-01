@@ -24,5 +24,8 @@ export default {
   },
   getCatMeals(names: string) {
     return apiClient.get(`/filter.php?c=${names}`)
+  },
+  getMealsRandom() {
+    return apiClient.get(`/randomselection.php`)
   }
 }

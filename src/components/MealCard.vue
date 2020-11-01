@@ -1,12 +1,15 @@
 <template>
   <router-link
     class="meal-link"
-    :to="{ name: 'details', params: { id: meal.idMeal } }"
+    :to="{
+      name: 'details',
+      params: { id: meal.idMeal }
+    }"
   >
     <div class="meal-card ">
-      <h4>{{ meal.strMeal }}</h4>
+      <div class="header">{{ meal.strMeal }}</div>
       <img class="img" :src="meal.strMealThumb" alt="Image" />
-      <h6>See details</h6>
+      <div>See details</div>
     </div>
   </router-link>
 </template>
@@ -25,16 +28,22 @@ export default Vue.extend({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .meal-card {
-  align-items: center;
+  box-sizing: border-box;
+  background-color: #cbf0cf;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
   width: 300px;
-  margin: 20px;
+  margin: 15px;
   padding: 20px;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   cursor: pointer;
 }
+
 .meal-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.11);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  background-color: #233329;
+  background-image: linear-gradient(360deg, green, #63d471, green);
+  color: #fff;
 }
 .meal-link {
   color: black;
@@ -42,8 +51,10 @@ export default Vue.extend({
   font-weight: bold;
 }
 .img {
+  cursor: pointer;
   align-items: content-center;
-  width: 170px;
-  height: 170px;
+  width: 120px;
+  height: 120px;
+  vertical-align: middle;
 }
 </style>

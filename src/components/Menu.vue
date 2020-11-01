@@ -1,7 +1,7 @@
 <template>
   <div id="nav" class="nav">
     <nav>
-      <div class="nav-link">
+      <div class="btn-group">
         <router-link :to="{ name: 'home' }" tag="button">Home</router-link>
         <router-link :to="{ name: 'randomizer' }" tag="button"
           >Random</router-link
@@ -24,19 +24,42 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
-  background-color: #333;
+  display: flex;
+  padding: 12px;
+  width: 100%;
   position: fixed;
   z-index: 999;
   top: 0;
-  margin-bottom: 120px;
-  overflow: visible;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
 }
-.nav-link {
-  display: flex;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.btn-group button {
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  border: 1px solid green;
+  color: white;
+  padding: 13px 27px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:hover {
+  background-color: #63d471;
+  background-image: linear-gradient(
+    360deg,
+    #63d471 0%,
+    #233329 14%,
+    #63d471 99%
+  );
+  color: white;
 }
 </style>

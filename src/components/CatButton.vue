@@ -1,7 +1,7 @@
 <template>
   <div class="flex-container">
     <router-link
-      :to="{ name: 'CatMeals', params: { names: cat.strCategory } }"
+      :to="{ name: 'catMeals', params: { names: cat.strCategory } }"
       tag="button"
       >{{ cat.strCategory }}
     </router-link>
@@ -18,3 +18,12 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style scoped>
+.flex-container {
+  display: inline;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+</style>

@@ -28,7 +28,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/categories/:names",
-    name: "CatMeals",
+    name: "catMeals",
     component: loadView("CatMeals"),
     props: true
   },
