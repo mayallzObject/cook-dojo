@@ -35,8 +35,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-color: #fff;
-  /* background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%); */
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -47,7 +45,6 @@ body {
 #app {
   display: flex;
   margin: 120px 0;
-
   text-align: center;
   min-height: 100vh;
 }
@@ -58,11 +55,12 @@ body {
 }
 .flex-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
 }
 .flex-container > div {
   text-align: center;
+  flex-grow: 4;
 }
 .btn-group button {
   font-size: 15px;

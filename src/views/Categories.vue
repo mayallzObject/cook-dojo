@@ -22,22 +22,11 @@ export default Vue.extend({
     }
   },
   created() {
-    this.$store.dispatch("fetchCategories", {})
+    this.$store.dispatch("fetchCategories")
     this.$store.dispatch("fetchMealByCat", this.names)
   },
   computed: mapState(["categories"])
 })
 </script>
 
-<style scope>
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.flex-container > div {
-  width: 500px;
-  text-align: center;
-}
-</style>
+<style scoped></style>
