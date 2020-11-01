@@ -31,20 +31,25 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.category-card {
+* {
   box-sizing: border-box;
+}
+.category-card {
+  box-sizing: inherit;
   background-color: #cbf0cf;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  width: 300px;
-  margin: 15px;
+  width: 600px;
+  height: 90%;
+  margin: 20px;
   padding: 20px;
   text-align: left;
   transition: all 0.3s linear;
   cursor: pointer;
 }
+
 .category-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
   background-color: #233329;
   background-image: linear-gradient(360deg, green, #63d471, green);
   color: #fff;

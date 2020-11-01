@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      The Cocking Dojo
+      Cocking Dojo
     </h1>
   </div>
 </template>

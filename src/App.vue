@@ -2,10 +2,10 @@
   <div>
     <div id="app">
       <Menu />
-      <div>
+      <div class="flex-container">
         <Header />
-        <router-view />
       </div>
+      <router-view />
     </div>
     <div>
       <Footer />
@@ -34,16 +34,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 #app {
-  display: flex;
+  display: flex-box;
   margin: 120px 0;
   text-align: center;
   min-height: 100vh;
@@ -60,7 +59,6 @@ body {
 }
 .flex-container > div {
   text-align: center;
-  flex-grow: 4;
 }
 .btn-group button {
   font-size: 15px;

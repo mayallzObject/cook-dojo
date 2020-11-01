@@ -28,5 +28,3 @@ export default Vue.extend({
   computed: mapState(["categories"])
 })
 </script>
-
-<style scoped></style>
