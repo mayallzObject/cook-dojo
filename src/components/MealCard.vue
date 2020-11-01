@@ -53,8 +53,8 @@ export default Vue.extend({
 .img {
   cursor: pointer;
   align-items: content-center;
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   vertical-align: middle;
 }
 </style>

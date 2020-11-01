@@ -1,18 +1,16 @@
 <template>
   <div class="footer">
-    <div>
+    <div class="flex-container">
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
     </div>
     <div>
-      <router-link class="footer-link" to="/categories/beef">
-        Categories
-      </router-link>
-    </div>
-    <div>
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
         Randomizer
+      </router-link>
+      <router-link class="footer-link" :to="{ name: 'randomizer' }">
+        categories
       </router-link>
     </div>
   </div>
@@ -22,10 +20,10 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "Footer",
-  props: ["names"]
+  name: "Footer"
 })
 </script>
+
 <style scoped>
 .footer {
   display: block;

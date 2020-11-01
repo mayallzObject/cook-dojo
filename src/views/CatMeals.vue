@@ -4,10 +4,7 @@
     <div>
       <CategoriesButton />
     </div>
-    <p>
-      We have {{ catLength ? catLength : null }} delicious meals in this
-      category
-    </p>
+
     <div class="flex-container">
       <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
     </div>

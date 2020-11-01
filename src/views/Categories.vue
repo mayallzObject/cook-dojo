@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from "vue"
-import { mapState, mapGetters } from "vuex"
+import { mapState } from "vuex"
 import CategoryCard from "@/components/CategoryCard.vue"
 
 export default Vue.extend({
