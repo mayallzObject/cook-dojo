@@ -1,8 +1,9 @@
 <template>
   <div>
     <div id="app">
+      <Menu />
       <div>
-        <Menu />
+        <Header />
         <router-view />
       </div>
     </div>
@@ -15,12 +16,14 @@
 <script lang="ts">
 import Vue from "vue"
 import Menu from "@/components/Menu.vue"
+import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
 
 export default Vue.extend({
   components: {
     Menu,
-    Footer
+    Footer,
+    Header
   }
 })
 </script>
@@ -32,7 +35,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  width: 100% auto;
+  background-color: #fff;
+  /* background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%); */
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -40,12 +46,15 @@ body {
 }
 #app {
   display: flex;
-  margin-top: 200px;
+  margin: 120px 0;
+
   text-align: center;
+  min-height: 100vh;
 }
 
 .header {
   text-align: center;
+  padding: 20px;
 }
 .flex-container {
   display: flex;
@@ -56,15 +65,14 @@ body {
   text-align: center;
 }
 .btn-group button {
-  margin-left: 5px;
-  font-weight: bold;
-  font-size: 10px;
+  font-size: 15px;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
   color: white;
-  padding: 10px 24px;
+  padding: 13px 27px;
   cursor: pointer;
+  outline: none;
 }
 
 /* Clear floats (clearfix hack) */
@@ -75,8 +83,8 @@ body {
 }
 
 .btn-group button:hover {
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  background-color: #166d3b;
+  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
 }
 .header {
   font-size: 20px;
@@ -85,13 +93,15 @@ body {
 
 .button {
   font-weight: bold;
-  font-size: 20px;
-  margin: 1px;
-  background-color: #99201c;
-  background-image: linear-gradient(360deg, #99201c 0%, #f56545 74%);
+  font-size: 18px;
+  border-radius: 45px;
+  margin-bottom: 50px;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #63d471, #233329 0%, #63d471 94%);
   border: 1px solid green;
-  color: white;
-  padding: 10px 24px;
+  color: #fff;
+  padding: 20px 67px;
+  outline: none;
   cursor: pointer;
 }
 .button:after {
@@ -99,13 +109,8 @@ body {
   clear: both;
 }
 .button:hover {
-  background-color: #aff6cf;
-  background-image: linear-gradient(
-    360deg,
-    #aff6cf 0%,
-    #9f98e8 14%,
-    #aff6cf 99%
-  );
+  background-color: #233329;
+  background-image: linear-gradient(360deg, green, #63d471 0%, green 50%);
 }
 
 hr {
@@ -124,7 +129,6 @@ h3,
 h4,
 h5,
 h6 {
-  display: flex;
   align-items: center;
   font-family: "Montserrat", sans-serif;
 }

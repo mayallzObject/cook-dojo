@@ -24,8 +24,8 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
+  display: flex;
   padding: 12px;
-  text-align: center;
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -35,13 +35,14 @@ export default Vue.extend({
 }
 .btn-group button {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
   color: white;
-  padding: 12px 34px;
+  padding: 13px 27px;
   cursor: pointer;
+  outline: none;
 }
 
 /* Clear floats (clearfix hack) */
@@ -59,5 +60,6 @@ export default Vue.extend({
     #233329 14%,
     #63d471 99%
   );
+  color: white;
 }
 </style>

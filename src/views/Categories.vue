@@ -6,10 +6,11 @@
 
 <script lang="ts">
 import Vue from "vue"
-import { mapState } from "vuex"
+import { mapState, mapGetters } from "vuex"
 import CategoryCard from "@/components/CategoryCard.vue"
 
 export default Vue.extend({
+  props: ["names"],
   name: "Categories",
   components: {
     CategoryCard
@@ -22,6 +23,7 @@ export default Vue.extend({
   },
   created() {
     this.$store.dispatch("fetchCategories", {})
+    this.$store.dispatch("fetchMealByCat", this.names)
   },
   computed: mapState(["categories"])
 })

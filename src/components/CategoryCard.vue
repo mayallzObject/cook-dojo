@@ -15,11 +15,16 @@
 
 <script lang="ts">
 import Vue from "vue"
+import { mapGetters, mapState } from "vuex"
 
 export default Vue.extend({
   name: "CategoryCard",
   props: {
     cat: Object
+  },
+  computed: {
+    ...mapGetters(["catLength"]),
+    ...mapState(["categories"])
   }
 })
 </script>

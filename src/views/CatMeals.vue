@@ -18,7 +18,7 @@
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
 import CategoriesButton from "@/components/CategoriesButton.vue"
-import { mapState } from "vuex"
+import { mapState, mapGetters } from "vuex"
 
 export default Vue.extend({
   props: ["names"],
@@ -32,9 +32,7 @@ export default Vue.extend({
     this.$store.dispatch("fetchCategories")
   },
   computed: {
-    catLength() {
-      return this.$store.getters.catLength
-    },
+    ...mapGetters(["catLength"]),
     ...mapState(["mealsCat", "categories"])
   }
 })

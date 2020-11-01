@@ -1,12 +1,13 @@
 <template>
   <div>
     <button class="button" v-on:click="show = !show">
-      Find meals by in category
+      Filter by category
     </button>
-    <div v-if="show" id="box" class="btn-group">
+    <div>All categories</div>
+    <div v-if="show" class="btn-group">
       <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
     </div>
-    <div>Latest Meals</div>
+    <h1>Latest Meals</h1>
     <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
