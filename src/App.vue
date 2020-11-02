@@ -2,7 +2,7 @@
   <div>
     <div id="app">
       <Menu />
-      <div class="flex-container">
+      <div class="container">
         <Header />
       </div>
       <router-view />
@@ -34,6 +34,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 
 body {
   width: 100%;
@@ -49,6 +50,7 @@ body {
   min-height: 100vh;
 }
 .title {
+  font-family: "Merienda", Helvetica, Arial;
   background-color: #63d471;
   background: linear-gradient(360deg, #233329 0%, #63d471 74%);
   background-clip: text;
@@ -58,10 +60,14 @@ body {
   font-size: 80px;
 }
 .sub-title {
+  font-family: "Merienda", Helvetica, Arial;
   background-color: #63d471;
   background: linear-gradient(360deg, #233329 0%, #63d471 74%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.mealcard-title {
+  font-family: "Merienda", Helvetica, Arial;
 }
 .flex-container {
   display: flex;
@@ -69,6 +75,14 @@ body {
   justify-content: center;
 }
 .flex-container > div {
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.container > div {
   text-align: center;
 }
 .button-link {
@@ -87,16 +101,15 @@ body {
   outline: none;
 }
 
+.btn-group button:hover {
+  background-color: #166d3b;
+  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
+}
 /* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
-}
-
-.btn-group button:hover {
-  background-color: #166d3b;
-  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
 }
 
 .button {
@@ -127,7 +140,7 @@ hr {
   overflow: visible;
 }
 a {
-  color: #39b982;
+  color: #3966b9;
   font-weight: 600;
   background-color: transparent;
 }
