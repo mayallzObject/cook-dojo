@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <div>
+    <div class="container">
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
@@ -28,17 +28,26 @@ export default Vue.extend({
 
 <style scoped>
 .footer {
-  display: block;
   z-index: 999;
+  padding: 3rem;
   position: sticky;
   bottom: 0;
+  align-items: left;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
-  text-align: center;
 }
 .footer-link {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.container > div {
+  text-align: left;
 }
 </style>

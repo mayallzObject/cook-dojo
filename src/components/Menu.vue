@@ -24,8 +24,8 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
-  justify-content: center;
-  padding: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 100%;
   position: fixed;
   z-index: 999;
