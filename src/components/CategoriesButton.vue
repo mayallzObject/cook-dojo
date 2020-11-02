@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="{ name: 'home' }">
+  <router-link :to="{ name: 'categories' }">
     <button class="button">
-      Back to Homepage
+      Back to Categories
     </button>
   </router-link>
 </template>
@@ -10,7 +10,7 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "HomeButton"
+  name: "CategortiesButton"
 })
 </script>
 

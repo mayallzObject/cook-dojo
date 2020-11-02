@@ -62,8 +62,7 @@ export default Vue.extend({
   font-weight: bold;
 }
 .img {
-  float: left;
-  padding: 15px;
+  padding: 10px;
   width: 300px;
   height: 200px;
 }

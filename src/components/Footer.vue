@@ -1,7 +1,6 @@
 <template>
   <div class="footer">
     <div>
-      <h1>UseFull links</h1>
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
@@ -30,7 +29,6 @@ export default Vue.extend({
 <style scoped>
 .footer {
   display: block;
-  justify-content: flex-start;
   z-index: 999;
   position: sticky;
   bottom: 0;
