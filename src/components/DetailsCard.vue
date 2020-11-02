@@ -1,13 +1,14 @@
 <template>
   <div class="details-card">
     <h3>{{ meal.strMeal }}</h3>
-    <h4>{{ meal.strCategory }}</h4>
+
     <img class="details-img" :src="meal.strMealThumb" alt="Image" />
     <ul class="details-ingr">
-      <h5>Details</h5>
-      <li>{{ meal.strMeasure1 }}</li>
-      <li>{{ meal.strMeasure1 }}</li>
-      <h5>Ingridients</h5>
+      <h5 class="sub-title">Details</h5>
+      <li>Category: {{ meal.strCategory }}</li>
+      <li>Kitchen: {{ meal.strArea }}</li>
+      <li>Tags: {{ meal.strTags }}</li>
+      <h5 class="sub-title">Ingridients</h5>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient2 }} {{ meal.strMeasure2 }}</li>
@@ -31,9 +32,11 @@
       <li>{{ meal.strIngredient20 }} {{ meal.strMeasure20 }}</li>
     </ul>
     <ul class="details-text">
-      <h5>Instructions</h5>
+      <h5 class="sub-title">Instructions</h5>
       <li>{{ meal.strInstructions }}</li>
-      <li>{{ meal.strYoutube }}</li>
+      <a :href="meal.strYoutube" target="_blank">
+        <p>YouTubeVideo</p>
+      </a>
     </ul>
   </div>
 </template>

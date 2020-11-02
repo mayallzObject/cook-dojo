@@ -35,23 +35,22 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 .category-card {
-  box-sizing: inherit;
+  box-sizing: border-box;
   background-color: #233329;
   background-image: linear-gradient(160deg, green 10%, #63d471, green 94%);
   color: #fff;
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
   width: 310px;
   margin: 20px;
-  height: 95%;
   padding: 20px;
-  text-align: left;
+  height: 95%; /*All cards have the same height*/
   transition: all 0.3s linear;
   cursor: pointer;
 }
 
 .category-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.02);
+  box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
   background-color: #233329;
   background-image: linear-gradient(160deg, green 0%, #63d471, green 24%);
   color: #fff;

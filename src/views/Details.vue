@@ -3,6 +3,7 @@
     <div>
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
+    <h1>Random recommendations</h1>
     <div>
       <DetailsCard
         v-for="meal in randomMeals.slice(1, 4)"

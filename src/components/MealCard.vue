@@ -9,7 +9,7 @@
     <div class="meal-card ">
       <h4 class="meal">{{ meal.strMeal }}</h4>
       <img class="img" :src="meal.strMealThumb" alt="Image" />
-      <p>See details</p>
+      <p class="details">Click for details</p>
     </div>
   </router-link>
 </template>
@@ -31,22 +31,23 @@ export default Vue.extend({
   box-sizing: border-box;
   color: #233329;
   background-color: #ddf5e1;
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  width: 300px;
+  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  width: 310px;
   margin: 20px;
-  padding: 10px;
-  height: 90%;
+  padding: 20px;
+  height: 85%; /*All cards have the same height*/
   transition: all 0.3s linear;
   cursor: pointer;
 }
 
 .meal-card:hover {
-  transform: scale(1.11);
-  box-shadow: 0 4 6px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  background-color: #4fb15a;
-
+  transform: scale(1.02);
+  box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  background-color: #63d471;
+  background-image: linear-gradient(180deg, green 0%, #63d471 0%, green 20%);
   color: #fff;
 }
+
 .meal-link {
   color: black;
   text-decoration: none;
@@ -55,7 +56,7 @@ export default Vue.extend({
 .img {
   cursor: pointer;
   align-items: content-center;
-  width: 220px;
+  width: 200px;
   height: 170px;
   /* vertical-align: middle; */
 }
