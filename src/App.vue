@@ -102,8 +102,8 @@ body {
 }
 
 .btn-group button:hover {
-  background-color: #166d3b;
-  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #63d471 0%, #233329 90%);
 }
 /* Clear floats (clearfix hack) */
 .btn-group:after {
@@ -118,7 +118,7 @@ body {
   border-radius: 45px;
   margin-top: 50px;
   background-color: #63d471;
-  background-image: linear-gradient(360deg, #63d471, #233329 0%, #63d471 94%);
+  background-image: linear-gradient(360deg, green 0%, #63d471 74%);
   border: 1px solid green;
   color: #fff;
   padding: 20px 67px;
@@ -131,7 +131,7 @@ body {
 }
 .button:hover {
   background-color: #233329;
-  background-image: linear-gradient(360deg, green, #63d471 0%, green 50%);
+  background-image: linear-gradient(360deg, #63d471 0%, green 74%);
 }
 
 hr {
