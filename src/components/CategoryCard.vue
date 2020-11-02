@@ -36,16 +36,15 @@ export default Vue.extend({
 }
 .category-card {
   box-sizing: border-box;
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+  max-width: 710px;
+  height: auto; /*All cards have the same height*/
   background-color: #233329;
   background-image: linear-gradient(160deg, green 10%, #63d471, green 94%);
   color: #fff;
   box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  max-width: 310px;
-  margin: 20px;
-  padding: 20px;
-  height: auto; /*All cards have the same height*/
-  transition: all 0.3s linear;
-  cursor: pointer;
   transition: all 0.3s linear;
   cursor: pointer;
 }
@@ -63,9 +62,14 @@ export default Vue.extend({
   font-weight: bold;
 }
 .img {
-  align-items: left;
+  float: left;
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
+}
+.category-card:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>

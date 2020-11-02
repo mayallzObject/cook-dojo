@@ -44,11 +44,6 @@ export default Vue.extend({
   cursor: pointer;
   outline: none;
 }
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
 .btn-group button:hover {
   background-color: #63d471;
   background-image: linear-gradient(
@@ -58,5 +53,10 @@ export default Vue.extend({
     #63d471 99%
   );
   color: white;
+}
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>

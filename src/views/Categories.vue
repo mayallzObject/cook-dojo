@@ -2,7 +2,7 @@
   <div>
     <HomeButton />
     <h2 class="sub-title">Categories</h2>
-    <div class="flex-container">
+    <div class="container">
       <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
     </div>
   </div>
@@ -34,3 +34,14 @@ export default Vue.extend({
   computed: mapState(["categories"])
 })
 </script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.container > div {
+  text-align: center;
+}
+</style>

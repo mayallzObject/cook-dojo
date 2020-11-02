@@ -4,7 +4,7 @@
     <div>
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
-    <h1 class="sub-title">Random recommendations</h1>
+    <h1 class="sub-title">Random Meal Selection</h1>
     <div>
       <DetailsCard
         v-for="meal in randomMeals.slice(1, 4)"

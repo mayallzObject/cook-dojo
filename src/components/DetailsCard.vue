@@ -1,14 +1,14 @@
 <template>
   <div class="details-card">
-    <h3>{{ meal.strMeal }}</h3>
+    <h3 class="details-title">{{ meal.strMeal }}</h3>
 
     <img class="details-img" :src="meal.strMealThumb" alt="Image" />
     <ul class="details-ingr">
-      <h5 class="sub-title">Details</h5>
+      <h5 class="details-title">Details</h5>
       <li>Category: {{ meal.strCategory }}</li>
       <li>Kitchen: {{ meal.strArea }}</li>
       <li>Tags: {{ meal.strTags }}</li>
-      <h5 class="sub-title">Ingridients</h5>
+      <h5 class="details-title">Ingridients</h5>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient2 }} {{ meal.strMeasure2 }}</li>
@@ -32,7 +32,7 @@
       <li>{{ meal.strIngredient20 }} {{ meal.strMeasure20 }}</li>
     </ul>
     <ul class="details-text">
-      <h5 class="sub-title">Instructions</h5>
+      <h5 class="details-title">Instructions</h5>
       <li>{{ meal.strInstructions }}</li>
       <a :href="meal.strYoutube" target="_blank">
         <p>YouTube Video</p>
@@ -63,12 +63,11 @@ export default Vue.extend({
   padding: 10px;
   min-height: 100%;
 }
-
-.meal-card:hover {
-  transform: scale(1.11);
-  box-shadow: 0 4 6px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  background-color: #4fb15a;
-  color: #fff;
+.details-title {
+  background-color: #63d471;
+  background: linear-gradient(360deg, #73ad8a 0%, green 74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .details-link {
   color: black;

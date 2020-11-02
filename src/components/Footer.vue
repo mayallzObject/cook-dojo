@@ -29,7 +29,7 @@ export default Vue.extend({
 <style scoped>
 .footer {
   z-index: 999;
-  padding: 3rem;
+  padding: 1rem;
   position: sticky;
   bottom: 0;
   align-items: left;
