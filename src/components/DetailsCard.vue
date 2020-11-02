@@ -35,7 +35,7 @@
       <h5 class="sub-title">Instructions</h5>
       <li>{{ meal.strInstructions }}</li>
       <a :href="meal.strYoutube" target="_blank">
-        <p>YouTubeVideo</p>
+        <p>YouTube Video</p>
       </a>
     </ul>
   </div>
@@ -79,7 +79,7 @@ export default Vue.extend({
   float: left;
   width: 100%;
   height: auto;
-  max-width: 41rem;
+  max-width: 37rem;
 }
 .details-ingr {
   float: left;

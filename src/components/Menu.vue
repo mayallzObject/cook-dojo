@@ -44,11 +44,19 @@ export default Vue.extend({
   cursor: pointer;
   outline: none;
 }
-
-/* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
+}
+.btn-group button:hover {
+  background-color: #63d471;
+  background-image: linear-gradient(
+    360deg,
+    #63d471 0%,
+    #233329 14%,
+    #63d471 99%
+  );
+  color: white;
 }
 </style>

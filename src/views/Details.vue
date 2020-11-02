@@ -1,9 +1,10 @@
 <template>
   <div>
+    <h1 class="sub-title">Details</h1>
     <div>
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
     </div>
-    <h1>Random recommendations</h1>
+    <h1 class="sub-title">Random recommendations</h1>
     <div>
       <DetailsCard
         v-for="meal in randomMeals.slice(1, 4)"

@@ -7,9 +7,8 @@
     }"
   >
     <div class="meal-card ">
-      <h4 class="meal">{{ meal.strMeal }}</h4>
+      <h5 class="meal">{{ meal.strMeal }}</h5>
       <img class="img" :src="meal.strMealThumb" alt="Image" />
-      <p class="details">Click for details</p>
     </div>
   </router-link>
 </template>
@@ -32,7 +31,7 @@ export default Vue.extend({
   color: #233329;
   background-color: #ddf5e1;
   box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  max-width: 310px;
+  width: 310px;
   margin: 20px;
   padding: 20px;
   height: auto; /*All cards have the same height*/
