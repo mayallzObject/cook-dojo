@@ -1,11 +1,12 @@
 <template>
   <div>
+    <button class="button" @click.prevent="$store.dispatch('fetchRandomMeal')">
+      Random
+    </button>
+    <h2 class="sub-title">Random Meal</h2>
     <div class="flex-container">
       <MealCard v-for="meal in mealRandom" :key="meal.id" :meal="meal" />
     </div>
-    <button @click.prevent="$store.dispatch('fetchRandomMeal')">
-      Random
-    </button>
   </div>
 </template>
 

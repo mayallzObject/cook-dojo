@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <div class="flex-container">
+    <div>
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
@@ -9,8 +9,10 @@
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
         Randomizer
       </router-link>
-      <router-link class="footer-link" :to="{ name: 'randomizer' }">
-        categories
+    </div>
+    <div>
+      <router-link class="footer-link" :to="{ name: 'categories' }">
+        Categories
       </router-link>
     </div>
   </div>

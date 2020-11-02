@@ -1,10 +1,7 @@
 <template>
   <div>
-    <h5>{{ names }}</h5>
-    <div>
-      <CategoriesButton />
-    </div>
-
+    <CategoriesButton />
+    <h2 class="sub-title">{{ names }} Category</h2>
     <div class="flex-container">
       <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
     </div>

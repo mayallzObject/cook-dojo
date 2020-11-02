@@ -4,7 +4,7 @@
       <div class="btn-group">
         <router-link :to="{ name: 'home' }" tag="button">Home</router-link>
         <router-link :to="{ name: 'randomizer' }" tag="button"
-          >Random</router-link
+          >Randomizer</router-link
         >
         <router-link :to="{ name: 'categories' }" tag="button"
           >Categories</router-link
@@ -24,7 +24,7 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
-  display: flex;
+  justify-content: center;
   padding: 12px;
   width: 100%;
   position: fixed;
@@ -40,7 +40,7 @@ export default Vue.extend({
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
   color: white;
-  padding: 13px 27px;
+  padding: 13px 20px;
   cursor: pointer;
   outline: none;
 }
