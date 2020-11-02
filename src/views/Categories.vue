@@ -1,6 +1,14 @@
 <template>
-  <div class="flex-container">
-    <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
+  <div>
+    <button class="button">
+      <router-link class="button-link" :to="{ name: 'home' }"
+        >Back to Homepage</router-link
+      >
+    </button>
+    <h2 class="sub-title">Random Meal</h2>
+    <div class="flex-container">
+      <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
+    </div>
   </div>
 </template>
 

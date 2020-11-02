@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import Vue from "vue"
-import { mapState, mapGetters } from "vuex"
+import { mapState } from "vuex"
 import DetailsCard from "@/components/DetailsCard.vue"
 
 export default Vue.extend({
@@ -26,12 +26,8 @@ export default Vue.extend({
   },
   created() {
     this.$store.dispatch("fetchMeal", this.id)
-    this.$store.dispatch("fetchMeals")
     this.$store.dispatch("fetchMealsRandom")
   },
-  computed: {
-    ...mapGetters(["sortCategory", "sortID"]),
-    ...mapState(["mealID", "meals", "randomMeals"])
-  }
+  computed: mapState(["mealID", "randomMeals"])
 })
 </script>

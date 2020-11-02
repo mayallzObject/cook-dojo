@@ -17,12 +17,8 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.meal-card {
-  padding: 0 20px 20px;
-  margin: 20px 20px;
-}
 .img {
-  width: 400px;
-  height: 475px;
+  width: 300px;
+  height: 300px;
 }
 </style>

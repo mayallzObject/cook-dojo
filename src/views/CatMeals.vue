@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h5>{{ names }}</h5>
-    <div>
-      <CategoriesButton />
-    </div>
-
+    <button class="button">
+      <router-link class="button-link" :to="{ name: 'home' }"
+        >Back to Categories</router-link
+      >
+    </button>
+    <h2 class="sub-title">{{ names }} Category</h2>
     <div class="flex-container">
       <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
     </div>
@@ -14,15 +15,13 @@
 <script lang="ts">
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
-import CategoriesButton from "@/components/CategoriesButton.vue"
 import { mapState, mapGetters } from "vuex"
 
 export default Vue.extend({
   props: ["names"],
   name: "CatMeals",
   components: {
-    MealCard,
-    CategoriesButton
+    MealCard
   },
   created() {
     this.$store.dispatch("fetchMealByCat", this.names)

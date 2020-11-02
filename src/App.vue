@@ -47,10 +47,20 @@ body {
   text-align: center;
   min-height: 100vh;
 }
-
-.header {
-  text-align: center;
-  padding: 20px;
+.title {
+  background-color: #63d471;
+  background: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  margin: 0;
+  font-size: 80px;
+}
+.sub-title {
+  background-color: #63d471;
+  background: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .flex-container {
   display: flex;
@@ -59,6 +69,11 @@ body {
 }
 .flex-container > div {
   text-align: center;
+}
+.button-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 .btn-group button {
   font-size: 15px;
@@ -82,16 +97,12 @@ body {
   background-color: #166d3b;
   background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
 }
-.header {
-  font-size: 20px;
-  font-weight: 700;
-}
 
 .button {
   font-weight: bold;
   font-size: 18px;
   border-radius: 45px;
-  margin-bottom: 50px;
+  margin-top: 50px;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #63d471, #233329 0%, #63d471 94%);
   border: 1px solid green;

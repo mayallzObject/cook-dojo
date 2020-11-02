@@ -7,9 +7,9 @@
     }"
   >
     <div class="meal-card ">
-      <div class="header">{{ meal.strMeal }}</div>
+      <h4 class="meal">{{ meal.strMeal }}</h4>
       <img class="img" :src="meal.strMealThumb" alt="Image" />
-      <div>See details</div>
+      <p>See details</p>
     </div>
   </router-link>
 </template>
@@ -29,20 +29,22 @@ export default Vue.extend({
 <style scoped>
 .meal-card {
   box-sizing: border-box;
-  background-color: #cbf0cf;
+  color: #233329;
+  background-color: #ddf5e1;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
   width: 300px;
-  margin: 15px;
-  padding: 20px;
+  margin: 20px;
+  padding: 10px;
+  height: 90%;
   transition: all 0.3s linear;
   cursor: pointer;
 }
 
 .meal-card:hover {
   transform: scale(1.11);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  background-color: #233329;
-  background-image: linear-gradient(360deg, green, #63d471, green);
+  box-shadow: 0 4 6px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+  background-color: #4fb15a;
+
   color: #fff;
 }
 .meal-link {
@@ -53,8 +55,8 @@ export default Vue.extend({
 .img {
   cursor: pointer;
   align-items: content-center;
-  width: 120px;
-  height: 120px;
-  vertical-align: middle;
+  width: 220px;
+  height: 170px;
+  /* vertical-align: middle; */
 }
 </style>
