@@ -87,16 +87,15 @@ body {
   outline: none;
 }
 
+.btn-group button:hover {
+  background-color: #166d3b;
+  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
+}
 /* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
-}
-
-.btn-group button:hover {
-  background-color: #166d3b;
-  background-image: linear-gradient(360deg, #166d3b 0%, #233329 90%);
 }
 
 .button {

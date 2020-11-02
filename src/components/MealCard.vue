@@ -32,7 +32,6 @@ export default Vue.extend({
   color: #233329;
   background-color: #ddf5e1;
   box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  width: 90%;
   max-width: 310px;
   margin: 20px;
   padding: 20px;
@@ -55,11 +54,9 @@ export default Vue.extend({
   font-weight: bold;
 }
 .img {
-  cursor: pointer;
   align-items: content-center;
   width: 100%;
   max-width: 200px;
-  height: 170px;
-  /* vertical-align: middle; */
+  height: auto;
 }
 </style>

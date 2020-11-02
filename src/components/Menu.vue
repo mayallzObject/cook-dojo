@@ -24,8 +24,8 @@ export default Vue.extend({
 
 <style scoped>
 .nav {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  justify-content: center;
+  padding: 12px;
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -50,16 +50,5 @@ export default Vue.extend({
   content: "";
   clear: both;
   display: table;
-}
-
-.btn-group button:hover {
-  background-color: #63d471;
-  background-image: linear-gradient(
-    360deg,
-    #63d471 0%,
-    #233329 14%,
-    #63d471 99%
-  );
-  color: white;
 }
 </style>
