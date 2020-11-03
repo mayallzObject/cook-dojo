@@ -22,6 +22,7 @@ export default Vue.extend({
 <style scoped>
 .flex-container {
   display: inline;
+  background-color: black;
   text-align: center;
   line-height: 45px;
   font-size: 20px;

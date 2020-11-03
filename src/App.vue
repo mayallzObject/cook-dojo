@@ -29,35 +29,33 @@ export default Vue.extend({
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
-
 body {
-  width: 100%;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  width: 100%;
   line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
 }
 #app {
-  display: flex-box;
   margin: 120px 0;
-  text-align: center;
   min-height: 100vh;
+  display: flex-box;
+  text-align: center;
 }
 .title {
+  margin: 0;
+  font-size: 80px;
   font-family: "Merienda", Helvetica, Arial;
   background-color: #63d471;
   background: linear-gradient(360deg, #233329 0%, #63d471 74%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-flex;
-  margin: 0;
-  font-size: 80px;
 }
 .sub-title {
   font-family: "Merienda", Helvetica, Arial;
@@ -92,20 +90,20 @@ body {
 }
 .btn-group button {
   font-size: 15px;
+  padding: 13px 27px;
+  color: white;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
   border: 1px solid green;
-  color: white;
-  padding: 13px 27px;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
 }
 
 .btn-group button:hover {
   background-color: #63d471;
-  background-image: linear-gradient(360deg, #63d471 0%, #233329 90%);
+  background-image: linear-gradient(360deg, #233329 5%, #63d471 65%);
 }
-/* Clear floats (clearfix hack) */
+
 .btn-group:after {
   content: "";
   clear: both;
@@ -113,15 +111,14 @@ body {
 }
 
 .button {
+  margin-top: 50px;
   font-weight: bold;
   font-size: 18px;
-  border-radius: 45px;
-  margin-top: 50px;
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, green 0%, #63d471 74%);
-  border: 1px solid green;
-  color: #fff;
   padding: 20px 67px;
+  border-radius: 45px;
+  background-color: #233329;
+  background-image: linear-gradient(360deg, #63d471 0%, green 84%);
+  color: #fff;
   outline: none;
   cursor: pointer;
 }
@@ -131,13 +128,7 @@ body {
 }
 .button:hover {
   background-color: #233329;
-  background-image: linear-gradient(360deg, #63d471 0%, green 74%);
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+  background-image: linear-gradient(350deg, #63d471 0%, green 74%);
 }
 a {
   color: #3966b9;

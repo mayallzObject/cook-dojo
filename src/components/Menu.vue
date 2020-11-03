@@ -52,7 +52,6 @@ export default Vue.extend({
     #233329 14%,
     #63d471 99%
   );
-  color: white;
 }
 .btn-group:after {
   content: "";

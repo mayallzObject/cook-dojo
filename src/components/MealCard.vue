@@ -24,30 +24,26 @@ export default Vue.extend({
 })
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .meal-card {
-  box-sizing: border-box;
-  background-color: #34bb443f;
-  /* background-image: linear-gradient(260deg, green 0%, #63d471, green 94%); */
-  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  width: 310px;
+  max-width: 310px;
   margin: 20px;
   padding: 40px 10px 10px;
-  height: auto; /*All cards have the same height*/
+  box-sizing: border-box;
+  background-color: #34bb443f;
+  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  height: auto;
   transition: all 0.2s linear;
   cursor: pointer;
 }
-
 .meal-card:hover {
   transform: scale(1.02);
   box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  background-color: #233329;
-  background-image: linear-gradient(260deg, green 0%, #63d471, green 94%);
   color: #fff;
   border-color: #fff;
+  background-color: #233329;
+  background-image: linear-gradient(260deg, green 0%, #63d471, green 94%);
 }
-
 .meal-link {
   color: #6b927a;
   text-decoration: none;
@@ -55,6 +51,7 @@ export default Vue.extend({
 }
 .img {
   max-width: 240px;
+  width: 100%;
   height: auto;
   border-style: solid;
 }
