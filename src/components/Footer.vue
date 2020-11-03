@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="container">
-      <h5>Quick links</h5>
+      <p>Quick links</p>
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
@@ -36,8 +36,8 @@ export default Vue.extend({
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
 }
 .footer-link {
+  font-family: "Merienda", Helvetica, Arial;
   text-decoration: none;
-  font-weight: bold;
   color: #fff;
 }
 .container {
