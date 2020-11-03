@@ -2,7 +2,7 @@
   <div>
     <CategoriesButton />
     <h2 class="sub-title">{{ names }} Category</h2>
-    <div class="flex-container">
+    <div class="cat-meal">
       <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
     </div>
   </div>
@@ -33,13 +33,13 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.flex-container {
+.cat-meal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.flex-container > div {
+.cat-meal > div {
   width: 500px;
   text-align: center;
 }

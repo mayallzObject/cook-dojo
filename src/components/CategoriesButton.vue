@@ -14,11 +14,3 @@ export default Vue.extend({
   name: "CategoriesButton"
 })
 </script>
-
-<style scoped>
-.home-link {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-</style>

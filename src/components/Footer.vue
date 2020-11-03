@@ -1,16 +1,15 @@
 <template>
   <div class="footer">
     <div class="container">
+      <h5>Quick links</h5>
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
-    </div>
-    <div>
+
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
         Randomizer
       </router-link>
-    </div>
-    <div>
+
       <router-link class="footer-link" :to="{ name: 'categories' }">
         Categories
       </router-link>
@@ -28,26 +27,26 @@ export default Vue.extend({
 
 <style scoped>
 .footer {
-  z-index: 999;
-  padding: 1rem;
   position: sticky;
-  bottom: 0;
   align-items: left;
+  z-index: 999;
+  padding: 20px;
+  bottom: 0;
   background-color: #63d471;
   background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
 }
 .footer-link {
-  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  color: #fff;
 }
 .container {
-  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
 }
 .container > div {
-  text-align: left;
+  text-align: center;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
+    <Menu />
     <div id="app">
-      <Menu />
       <div class="container">
         <Header />
       </div>
@@ -31,15 +31,14 @@ export default Vue.extend({
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 body {
   margin: 0;
-  font-size: 16px;
   width: 100%;
   line-height: 1.5;
   font-family: "Open Sans", sans-serif;
@@ -50,6 +49,7 @@ body {
   display: flex-box;
   text-align: center;
 }
+/* Global Titles */
 .title {
   margin: 0;
   font-size: 80px;
@@ -69,6 +69,7 @@ body {
 .mealcard-title {
   font-family: "Merienda", Helvetica, Arial;
 }
+/* Global Containers */
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -85,33 +86,31 @@ body {
 .container > div {
   text-align: center;
 }
-.button-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
+/* Global Buttons */
+/* categories buttons */
 .btn-group button {
   font-size: 15px;
   padding: 13px 27px;
   color: white;
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
-  border: 1px solid green;
+  font-weight: 700;
+  font-family: "Merienda", Helvetica, Arial;
+  background-color: #ff7878;
+  background-image: linear-gradient(315deg, green 0%, #74d680 95%);
+
+  border: 1px solid white;
   outline: none;
   cursor: pointer;
 }
-
 .btn-group button:hover {
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #233329 5%, #63d471 65%);
+  background-color: #ff7878;
+  background-image: linear-gradient(35deg, green 0%, #74d680 95%);
+  border-color: white;
 }
-
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
 }
-
 .button {
   margin-top: 50px;
   font-weight: bold;
@@ -138,12 +137,62 @@ body {
   transform: translateX(10px);
   opacity: 0;
 }
-
+/* Navigation */
+.nav {
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+}
+.nav-btn-group button {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 13px 20px;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.nav-btn-group button:hover {
+  background-color: #63d471;
+  background-image: linear-gradient(
+    360deg,
+    #63d471 0%,
+    #233329 14%,
+    #63d471 99%
+  );
+}
+.nav-btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Footer */
+.footer {
+  position: sticky;
+  align-items: left;
+  z-index: 999;
+  padding: 20px;
+  bottom: 0;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+}
+.footer-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+/* Global Transitions */
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.3s ease;
 }
-
 .slide-fade-leave-to {
   transform: translateX(-10px);
   opacity: 0;
@@ -156,6 +205,7 @@ body {
 .slide-up-enter-active {
   transition: all 0.6s ease;
 }
+/* Global Tags */
 a {
   color: #3966b9;
   font-weight: 600;

@@ -65,17 +65,16 @@ export default Vue.extend({
   max-width: 120px;
   height: 120px;
   width: 100%;
-  /* height: auto; */
-}
-.category-card:after {
-  content: "";
-  clear: both;
-  display: table;
 }
 .cat-text {
   margin: -10px;
   padding: 20px;
   float: center;
   text-align: left;
+}
+.category-card:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>

@@ -89,6 +89,7 @@ export default new Vuex.Store({
         })
     }
   },
+  // Getter gives value gives unexpcted error on render
   getters: {
     catLength: state => {
       return state.mealsCat.length

@@ -10,7 +10,7 @@
       </div>
     </transition>
     <h2 class="sub-title">Latest Meals</h2>
-    <div class="flex-container">
+    <div name class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
   </div>
@@ -20,7 +20,7 @@
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
 import CatButton from "@/components/CatButton.vue"
-import { mapGetters, mapState } from "vuex"
+import { mapState } from "vuex"
 
 export default Vue.extend({
   name: "Home",
@@ -36,7 +36,6 @@ export default Vue.extend({
     this.$store.dispatch("fetchCategories")
   },
   computed: {
-    ...mapGetters(["sortedTodos"]),
     ...mapState(["meals", "categories"])
   },
   methods: {

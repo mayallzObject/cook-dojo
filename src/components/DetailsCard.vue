@@ -54,18 +54,18 @@ export default Vue.extend({
 
 <style scoped>
 .details-card {
-  box-sizing: border-box;
-  font-family: "Merienda", Helvetica, Arial;
   display: flex-box;
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 10px;
+  font-family: "Merienda", Helvetica, Arial;
   color: #0d4d25;
   background-color: #ddf5e1;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  margin: 20px;
-  padding: 10px;
 }
 .details-title {
   font-family: "Merienda", Helvetica, Arial;
-  color: #197237e0;
+  color: #1a7237e0;
 }
 .details-link {
   color: black;
@@ -76,15 +76,15 @@ export default Vue.extend({
   float: left;
   margin: 10px;
   width: 100%;
-  height: auto;
   max-width: 34rem;
+  height: auto;
 }
 .details-ingr {
-  color: #ba1313;
   float: left;
+  list-style-type: none;
   margin: 10px;
   text-align: left;
-  list-style-type: none;
+  color: #ba1313;
 }
 .details-text {
   float: center;
