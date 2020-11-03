@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="button" @click.prevent="$store.dispatch('fetchRandomMeal')">
+    <button class="button" @click.prevent="getRandom">
       Random
     </button>
     <h2 class="sub-title">Random Meal</h2>
@@ -23,6 +23,11 @@ export default Vue.extend({
   created() {
     this.$store.dispatch("fetchRandomMeal")
   },
-  computed: mapState(["mealRandom"])
+  computed: mapState(["mealRandom"]),
+  methods: {
+    getRandom() {
+      this.$store.dispatch("fetchRandomMeal")
+    }
+  }
 })
 </script>

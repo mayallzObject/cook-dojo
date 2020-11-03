@@ -1,11 +1,13 @@
 <template>
   <div>
+    <Menu />
     <div id="app">
-      <Menu />
       <div class="container">
         <Header />
       </div>
-      <router-view />
+      <transition name="slide-fade" mode="out-in">
+        <router-view />
+      </transition>
     </div>
     <div>
       <Footer />
@@ -35,29 +37,27 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 @import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
-
 body {
-  width: 100%;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  width: 100%;
   line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
 }
 #app {
-  display: flex-box;
   margin: 120px 0;
-  text-align: center;
   min-height: 100vh;
+  display: flex-box;
+  text-align: center;
 }
+/* Global Titles */
 .title {
+  margin: 0;
+  font-size: 80px;
   font-family: "Merienda", Helvetica, Arial;
   background-color: #63d471;
   background: linear-gradient(360deg, #233329 0%, #63d471 74%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-flex;
-  margin: 0;
-  font-size: 80px;
 }
 .sub-title {
   font-family: "Merienda", Helvetica, Arial;
@@ -69,6 +69,7 @@ body {
 .mealcard-title {
   font-family: "Merienda", Helvetica, Arial;
 }
+/* Global Containers */
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -85,43 +86,41 @@ body {
 .container > div {
   text-align: center;
 }
-.button-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
+/* Global Buttons */
+/* categories buttons */
 .btn-group button {
   font-size: 15px;
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
-  border: 1px solid green;
-  color: white;
   padding: 13px 27px;
-  cursor: pointer;
-  outline: none;
-}
+  color: white;
+  font-weight: 700;
+  font-family: "Merienda", Helvetica, Arial;
+  background-color: #ff7878;
+  background-image: linear-gradient(315deg, green 0%, #74d680 95%);
 
-.btn-group button:hover {
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #63d471 0%, #233329 90%);
+  border: 1px solid white;
+  outline: none;
+  cursor: pointer;
 }
-/* Clear floats (clearfix hack) */
+.btn-group button:hover {
+  background-color: #ff7878;
+  background-image: linear-gradient(35deg, green 0%, #74d680 95%);
+  border-color: white;
+}
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
 }
-
 .button {
+  margin-top: 50px;
   font-weight: bold;
   font-size: 18px;
-  border-radius: 45px;
-  margin-top: 50px;
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, green 0%, #63d471 74%);
-  border: 1px solid green;
-  color: #fff;
   padding: 20px 67px;
+  border-radius: 45px;
+  background-color: #233329;
+  background-image: linear-gradient(180deg, #74d680 0%, #378b29 64%);
+  color: #fff;
+  border: 1px solid green;
   outline: none;
   cursor: pointer;
 }
@@ -130,15 +129,83 @@ body {
   clear: both;
 }
 .button:hover {
-  background-color: #233329;
-  background-image: linear-gradient(360deg, #63d471 0%, green 74%);
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #74d680 0%, #378b29 74%);
+  color: #fff;
+}
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+/* Navigation */
+.nav {
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+}
+.nav-btn-group button {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 13px 20px;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.nav-btn-group button:hover {
+  background-color: #63d471;
+  background-image: linear-gradient(
+    360deg,
+    #63d471 0%,
+    #233329 14%,
+    #63d471 99%
+  );
+}
+.nav-btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Footer */
+.footer {
+  position: sticky;
+  align-items: left;
+  z-index: 999;
+  padding: 20px;
+  bottom: 0;
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
+}
+.footer-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+/* Global Transitions */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.slide-up-enter {
+  transform: translateY(-10px); /* start 10px down*/
+  opacity: 0;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+.slide-up-enter-active {
+  transition: all 0.6s ease;
 }
+/* Global Tags */
 a {
   color: #3966b9;
   font-weight: 600;

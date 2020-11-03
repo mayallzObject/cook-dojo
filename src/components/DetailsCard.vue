@@ -4,11 +4,11 @@
 
     <img class="details-img" :src="meal.strMealThumb" alt="Image" />
     <ul class="details-ingr">
-      <h5 class="details-title">Details</h5>
+      <h4 class="details-title">Details</h4>
       <li>Category: {{ meal.strCategory }}</li>
       <li>Kitchen: {{ meal.strArea }}</li>
       <li>Tags: {{ meal.strTags }}</li>
-      <h5 class="details-title">Ingridients</h5>
+      <h4 class="details-title">Ingridients</h4>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient1 }} {{ meal.strMeasure1 }}</li>
       <li>{{ meal.strIngredient2 }} {{ meal.strMeasure2 }}</li>
@@ -32,7 +32,7 @@
       <li>{{ meal.strIngredient20 }} {{ meal.strMeasure20 }}</li>
     </ul>
     <ul class="details-text">
-      <h5 class="details-title">Instructions</h5>
+      <h4 class="details-title">Instructions</h4>
       <li>{{ meal.strInstructions }}</li>
       <a :href="meal.strYoutube" target="_blank">
         <p>YouTube Video</p>
@@ -54,20 +54,18 @@ export default Vue.extend({
 
 <style scoped>
 .details-card {
-  box-sizing: border-box;
   display: flex-box;
-  color: #233329;
-  background-color: #ddf5e1;
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+  box-sizing: border-box;
   margin: 20px;
   padding: 10px;
-  min-height: 100%;
+  font-family: "Merienda", Helvetica, Arial;
+  color: #0d4d25;
+  background-color: #ddf5e1;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
 }
 .details-title {
-  background-color: #63d471;
-  background: linear-gradient(360deg, #73ad8a 0%, green 74%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "Merienda", Helvetica, Arial;
+  color: #1a7237e0;
 }
 .details-link {
   color: black;
@@ -76,19 +74,26 @@ export default Vue.extend({
 }
 .details-img {
   float: left;
+  margin: 10px;
   width: 100%;
+  max-width: 34rem;
   height: auto;
-  max-width: 37rem;
 }
 .details-ingr {
   float: left;
-  text-decoration: none;
-  text-align: left;
   list-style-type: none;
+  margin: 10px;
+  text-align: left;
+  color: #ba1313;
 }
 .details-text {
+  float: center;
+  font-family: "Merienda", Helvetica, Arial;
+  margin: 11px;
+  font-weight: 500;
+  padding: -10px;
+  padding: 5px;
   box-sizing: border-box;
-  float: right;
   text-decoration: none;
   text-align: left;
   list-style-type: none;

@@ -1,5 +1,6 @@
 <template>
   <router-link :to="{ name: 'categories' }">
+    <!-- user friendly button for scrolling back -->
     <button class="button">
       Back to Categories
     </button>
@@ -10,14 +11,6 @@
 import Vue from "vue"
 
 export default Vue.extend({
-  name: "CategortiesButton"
+  name: "CategoriesButton"
 })
 </script>
-
-<style scoped>
-.home-link {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-</style>
