@@ -26,6 +26,7 @@ export default Vue.extend({
     this.$store.dispatch("fetchCategories")
   },
   computed: {
+    // the getter is temporary disabled
     ...mapGetters(["catLength"]),
     ...mapState(["mealsCat", "categories"])
   }
@@ -38,7 +39,6 @@ export default Vue.extend({
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .cat-meal > div {
   width: 500px;
   text-align: center;

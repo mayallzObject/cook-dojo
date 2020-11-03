@@ -189,6 +189,10 @@ body {
   color: #fff;
 }
 /* Global Transitions */
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.3s ease;
@@ -197,12 +201,12 @@ body {
   transform: translateX(-10px);
   opacity: 0;
 }
-.slide-up-enter {
-  transform: translateY(-10px); /* start 10px down*/
+.slide-down-enter {
+  transform: translateY(-10px); /* start 10px up*/
   opacity: 0;
 }
 
-.slide-up-enter-active {
+.slide-down-enter-active {
   transition: all 0.6s ease;
 }
 /* Global Tags */

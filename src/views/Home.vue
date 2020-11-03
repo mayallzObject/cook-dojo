@@ -3,14 +3,15 @@
     <button class="button" @click="openCatTab">
       Filter by category
     </button>
-    <transition name="slide-up" mode="out-in">
+    <transition name="slide-down" mode="out-in">
+      /
       <div v-if="show" class="btn-group">
         <h6 class="sub-title">All categories</h6>
         <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
       </div>
     </transition>
     <h2 class="sub-title">Latest Meals</h2>
-    <div name class="flex-container">
+    <div class="flex-container">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
     </div>
   </div>
