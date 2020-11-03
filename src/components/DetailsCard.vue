@@ -35,7 +35,7 @@
       <h4 class="details-title">Instructions</h4>
       <li>{{ meal.strInstructions }}</li>
       <a :href="meal.strYoutube" target="_blank">
-        <p>YouTube Video</p>
+        <p>...YouTube Video...</p>
       </a>
     </ul>
   </div>

@@ -1,15 +1,13 @@
 <template>
   <div class="footer">
     <div class="container">
-      <p>Quick links</p>
+      <p class="footer-link">Quick links</p>
       <router-link class="footer-link" :to="{ name: 'home' }">
         Homepage
       </router-link>
-
       <router-link class="footer-link" :to="{ name: 'randomizer' }">
         Randomizer
       </router-link>
-
       <router-link class="footer-link" :to="{ name: 'categories' }">
         Categories
       </router-link>
@@ -26,6 +24,12 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
+}
 .footer {
   position: sticky;
   align-items: left;
@@ -38,13 +42,7 @@ export default Vue.extend({
 .footer-link {
   font-family: "Merienda", Helvetica, Arial;
   text-decoration: none;
-  color: #fff;
-}
-.container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  width: 100%;
+  color: #e9f1b8;
 }
 .container > div {
   text-align: center;
