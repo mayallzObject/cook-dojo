@@ -5,7 +5,9 @@
       <div class="container">
         <Header />
       </div>
-      <router-view />
+      <transition name="slide-fade" mode="out-in">
+        <router-view />
+      </transition>
     </div>
     <div>
       <Footer />
@@ -117,8 +119,9 @@ body {
   padding: 20px 67px;
   border-radius: 45px;
   background-color: #233329;
-  background-image: linear-gradient(360deg, #63d471 0%, green 84%);
+  background-image: linear-gradient(180deg, #74d680 0%, #378b29 64%);
   color: #fff;
+  border: 1px solid green;
   outline: none;
   cursor: pointer;
 }
@@ -127,8 +130,31 @@ body {
   clear: both;
 }
 .button:hover {
-  background-color: #233329;
-  background-image: linear-gradient(350deg, #63d471 0%, green 74%);
+  background-color: #63d471;
+  background-image: linear-gradient(360deg, #74d680 0%, #378b29 74%);
+  color: #fff;
+}
+.slide-fade-enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.slide-up-enter {
+  transform: translateY(-10px); /* start 10px down*/
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.6s ease;
 }
 a {
   color: #3966b9;

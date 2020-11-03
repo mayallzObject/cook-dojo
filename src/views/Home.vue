@@ -3,9 +3,9 @@
     <button class="button" @click="openCatTab">
       Filter by category
     </button>
-    <transition name="fade">
+    <transition name="slide-up" mode="out-in">
       <div v-if="show" class="btn-group">
-        <h6>All categories</h6>
+        <h6 class="sub-title">All categories</h6>
         <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
       </div>
     </transition>
@@ -46,11 +46,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style scoped>
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-}
-</style>
