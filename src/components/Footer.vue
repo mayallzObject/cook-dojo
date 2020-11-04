@@ -27,11 +27,9 @@ export default Vue.extend({
 .container {
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
 }
 .footer {
   position: sticky;
-  width: 100%;
   z-index: 999;
   bottom: 0;
   background-color: #63d471;

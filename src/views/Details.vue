@@ -22,7 +22,7 @@ import DetailsCard from "@/components/DetailsCard.vue"
 
 export default Vue.extend({
   name: "Details",
-  props: ["id", "names"],
+  props: ["id"],
   components: {
     DetailsCard
   },

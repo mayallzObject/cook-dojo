@@ -1,7 +1,6 @@
 <template>
   <div class="details-card">
     <h3 class="details-title">{{ meal.strMeal }}</h3>
-
     <img class="details-img" :src="meal.strMealThumb" alt="Image" />
     <ul class="details-ingr">
       <h4 class="details-title">Details</h4>
