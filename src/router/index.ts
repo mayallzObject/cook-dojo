@@ -1,10 +1,6 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
 import Details from "@/views/Details.vue"
-import Randomizer from "@/views/Randomizer.vue"
-import CatMeals from "@/views/CatMeals.vue"
-import Categories from "@/views/Categories.vue"
-import Home from "@/views/Home.vue"
 
 Vue.use(VueRouter)
 
@@ -18,7 +14,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "home",
-    component: Home
+    component: loadView("Home")
   },
   {
     path: "/details/:id",
@@ -29,18 +25,18 @@ const routes: Array<RouteConfig> = [
   {
     path: "/categories",
     name: "categories",
-    component: Categories
+    component: loadView("Categories")
   },
   {
     path: "/categories/:names",
     name: "catMeals",
-    component: CatMeals,
+    component: loadView("CatMeals"),
     props: true
   },
   {
     path: "/randomizer",
     name: "randomizer",
-    component: Randomizer
+    component: loadView("Randomizer")
   }
 ]
 
