@@ -1,16 +1,56 @@
 <template>
-  <div class="footer">
-    <div class="container">
-      <p class="sub-header">Quick Links</p>
-      <router-link class="footer-link" :to="{ name: 'home' }">
-        Homepage
-      </router-link>
-      <router-link class="footer-link" :to="{ name: 'randomizer' }">
-        Random meals
-      </router-link>
-      <router-link class="footer-link" :to="{ name: 'categories' }">
-        Explore our categories
-      </router-link>
+  <div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <h2>Quick Links</h2>
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <router-link class="footer__link" :to="{ name: 'home' }">
+                Home
+              </router-link>
+            </li>
+            <li class="footer__item">
+              <router-link class="footer__link" :to="{ name: 'categories' }">
+                categories
+              </router-link>
+            </li>
+            <li class="footer__item">
+              <router-link class="footer__link" :to="{ name: 'randomizer' }">
+                randomizer
+              </router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-1-of-2">
+        <h2>Project</h2>
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a
+                href="https://github.com/mayallzObject/my-app"
+                target="_blank"
+                rel="noreferrer"
+                class="footer__link"
+              >
+                GitHub
+              </a>
+            </li>
+            <li class="footer__item">
+              <a
+                href="https://www.themealdb.com/api.php"
+                target="_blank"
+                rel="noreferrer"
+                class="footer__link"
+              >
+                REST Api link
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -22,26 +62,3 @@ export default Vue.extend({
   name: "Footer"
 })
 </script>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-flow: column wrap;
-}
-.footer {
-  position: sticky;
-  z-index: 999;
-  bottom: 0;
-  background-color: #63d471;
-  background-image: linear-gradient(360deg, #233329 0%, #63d471 74%);
-}
-.footer-link {
-  font-family: "Merienda", Helvetica, Arial;
-  text-decoration: none;
-  color: #e9f1b8;
-}
-.sub-header {
-  color: #374202;
-  font-weight: bold;
-}
-</style>

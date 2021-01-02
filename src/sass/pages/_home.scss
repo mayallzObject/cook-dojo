@@ -1,0 +1,92 @@
+.section-meal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.home-heading {
+  height: 10rem;
+  margin: 2rem 2rem 12rem 2rem;
+  letter-spacing: 1rem;
+  border: 7px solid $color-tertiary-dark;
+  font-size: 2rem;
+  color: $color-white;
+  display: flex;
+  background-color: $color-tertiary-light;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+
+  transition: all 0.5s;
+
+  @include respond(phone) {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+}
+
+.meal-card {
+  padding-top: 2rem;
+  background-color: $color-tertiary-light;
+  display: flex;
+
+  justify-content: center;
+  // align-self: stretch;
+  text-align: center;
+  margin: 2rem;
+  width: 29rem;
+
+  max-height: 32rem;
+  height: 100%;
+  border-radius: 3px;
+  border: 3px solid $color-white;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: transform 0.3s;
+
+  &__link {
+    &:link,
+    &:visited {
+      padding: 0.5rem 1rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.2s;
+      &:active,
+      &:hover {
+        color: $color-tertiary-light;
+      }
+    }
+  }
+  &__heading {
+    display: flex;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    justify-content: center;
+    text-decoration: none;
+    // align-content: space-around;
+    letter-spacing: 0.2rem;
+  }
+  &__img {
+    align-self: center;
+    text-align: center;
+    height: auto;
+    width: 70%;
+    border: 3px solid $color-white;
+    &:active,
+    &:hover {
+      border: 5px solid $color-tertiary-light;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+    background-color: $color-white;
+    border: 3px solid $color-tertiary-light;
+  }
+}

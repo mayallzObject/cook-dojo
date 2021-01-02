@@ -1,16 +1,16 @@
 <template>
-  <router-link
-    class="meal-link"
-    :to="{
-      name: 'details',
-      params: { id: meal.idMeal }
-    }"
-  >
-    <div class="meal-card ">
-      <img class="img" :src="meal.strMealThumb" alt="Image" />
-      <h5 class="mealcard-title">{{ meal.strMeal }}</h5>
-    </div>
-  </router-link>
+  <div class="meal-card">
+    <router-link
+      class="meal-card__link"
+      :to="{
+        name: 'details',
+        params: { id: meal.idMeal }
+      }"
+    >
+      <img class="meal-card__img" :src="meal.strMealThumb" alt="Image" />
+      <h5 class="meal-card__heading">{{ meal.strMeal }}</h5>
+    </router-link>
+  </div>
 </template>
 
 <script lang="ts">
@@ -23,36 +23,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style scoped>
-.meal-card {
-  max-width: 310px;
-  margin: 20px;
-  padding: 40px 10px 10px;
-  box-sizing: border-box;
-  background-color: #34bb443f;
-  box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  height: auto;
-  transition: all 0.2s linear;
-  cursor: pointer;
-}
-.meal-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 14px 21px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
-  color: #fff;
-  border-color: #fff;
-  background-color: #233329;
-  background-image: linear-gradient(260deg, green 0%, #63d471, green 94%);
-}
-.meal-link {
-  color: #6b927a;
-  text-decoration: none;
-  font-weight: bold;
-}
-.img {
-  max-width: 240px;
-  width: 100%;
-  height: auto;
-  border-style: solid;
-}
-</style>

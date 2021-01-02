@@ -1,17 +1,9 @@
 <template>
   <div>
-    <h1 class="sub-title">Details</h1>
-    <div>
+    <header class="home-heading">Details</header>
+    <section class="section-details">
       <DetailsCard v-for="meal in mealID" :key="meal.id" :meal="meal" />
-    </div>
-    <h1 class="sub-title">Random Meal Selection</h1>
-    <div>
-      <DetailsCard
-        v-for="meal in randomMeals.slice(1, 4)"
-        :key="meal.id"
-        :meal="meal"
-      />
-    </div>
+    </section>
   </div>
 </template>
 

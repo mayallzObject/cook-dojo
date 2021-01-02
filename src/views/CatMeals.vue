@@ -1,25 +1,25 @@
 <template>
   <div>
-    <CategoriesButton />
-    <h2 class="sub-title">{{ names }} Category</h2>
-    <div class="cat-meal">
-      <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
-    </div>
+    <header class="home-heading">{{ names }} Category</header>
+    <section class="section-meal">
+      <div class="section-meal">
+        <MealCard v-for="meal in mealsCat" :key="meal.names" :meal="meal" />
+      </div>
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
-import CategoriesButton from "@/components/CategoriesButton.vue"
+
 import { mapState, mapGetters } from "vuex"
 
 export default Vue.extend({
   props: ["names"],
   name: "CatMeals",
   components: {
-    MealCard,
-    CategoriesButton
+    MealCard
   },
   created() {
     this.$store.dispatch("fetchMealByCat", this.names)
@@ -32,15 +32,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style scoped>
-.cat-meal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.cat-meal > div {
-  width: 500px;
-  text-align: center;
-}
-</style>

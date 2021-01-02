@@ -1,33 +1,23 @@
 <template>
   <div>
-    <button class="button" @click="openCatTab">
-      Filter by category
-    </button>
-    <transition name="slide-down" mode="out-in">
-      /
-      <div v-if="show" class="btn-group">
-        <h6 class="sub-title">All categories</h6>
-        <CatButton v-for="cat in categories" :key="cat.idCategory" :cat="cat" />
-      </div>
-    </transition>
-    <h2 class="sub-title">Latest Meals</h2>
-    <div class="flex-container">
+    <header class="home-heading">
+      Latest Meals
+    </header>
+    <section class="section-meal">
       <MealCard v-for="meal in meals" :key="meal.id" :meal="meal" />
-    </div>
+    </section>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue"
 import MealCard from "@/components/MealCard.vue"
-import CatButton from "@/components/CatButton.vue"
 import { mapState } from "vuex"
 
 export default Vue.extend({
   name: "Home",
   components: {
-    MealCard,
-    CatButton
+    MealCard
   },
   data() {
     return { show: false }

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HomeButton />
-    <h2 class="sub-title">Categories</h2>
-    <div class="container">
+    <header class="home-heading">Categories</header>
+
+    <section class="section-cat">
       <CategoryCard v-for="cat in categories" :key="cat.names" :cat="cat" />
-    </div>
+    </section>
   </div>
 </template>
 
@@ -12,14 +12,12 @@
 import Vue from "vue"
 import { mapState } from "vuex"
 import CategoryCard from "@/components/CategoryCard.vue"
-import HomeButton from "@/components/HomeButton.vue"
 
 export default Vue.extend({
   props: ["names"],
   name: "Categories",
   components: {
-    CategoryCard,
-    HomeButton
+    CategoryCard
   },
   data() {
     return {
@@ -34,14 +32,3 @@ export default Vue.extend({
   computed: mapState(["categories"])
 })
 </script>
-
-<style scoped>
-.container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-.container > div {
-  text-align: center;
-}
-</style>

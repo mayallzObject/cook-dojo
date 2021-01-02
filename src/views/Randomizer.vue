@@ -1,12 +1,13 @@
 <template>
   <div>
-    <button class="button" @click.prevent="getRandom">
-      Random
-    </button>
-    <h2 class="sub-title">Random Meal</h2>
-    <div class="flex-container">
+    <header class="home-heading">Random Meal</header>
+
+    <section class="section-meal">
+      <a class="btn btn--white btn--animated" @click.prevent="getRandom">
+        Random
+      </a>
       <MealCard v-for="meal in mealRandom" :key="meal.id" :meal="meal" />
-    </div>
+    </section>
   </div>
 </template>
 
