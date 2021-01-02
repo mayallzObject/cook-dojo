@@ -6,11 +6,11 @@ import router from "./router"
 import store from "./store"
 import "@/sass/main.scss"
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 const requireComponent = require.context(
   "./components",
-  false,
+  true,
   /Base[A-Z]\w+\.(vue|js)$/
 )
 
