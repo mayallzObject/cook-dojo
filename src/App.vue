@@ -3,8 +3,8 @@
     <Navigation />
 
     <Header />
-    <router-view />
 
+    <router-view />
     <footer class="footer">
       <div class="row">
         <Footer />
