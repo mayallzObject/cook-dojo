@@ -1,20 +1,25 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
+import Home from "@/views/Home.vue"
 import Details from "@/views/Details.vue"
+
+import Categories from "@/views/Categories.vue"
+import CatMeals from "@/views/CatMeals.vue"
+import Randomizer from "@/views/Randomizer.vue"
 
 Vue.use(VueRouter)
 
 // Use lazzy routing
-function loadView(view: string) {
-  return () =>
-    import(/* webpackChunkName: "view-[request]" */ `@/views/${view}.vue`)
-}
+// function loadView(view: string) {
+//   return () =>
+//     import(/* webpackChunkName: "view-[request]" */ `@/views/${view}.vue`)
+// }
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "home",
-    component: loadView("Home")
+    component: Home
   },
   {
     path: "/details/:id",
@@ -25,18 +30,18 @@ const routes: Array<RouteConfig> = [
   {
     path: "/categories",
     name: "categories",
-    component: loadView("Categories")
+    component: Categories
   },
   {
     path: "/categories/:names",
     name: "catMeals",
-    component: loadView("CatMeals"),
+    component: CatMeals,
     props: true
   },
   {
     path: "/randomizer",
     name: "randomizer",
-    component: loadView("Randomizer")
+    component: Randomizer
   }
 ]
 
