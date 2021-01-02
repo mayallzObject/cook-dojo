@@ -46,9 +46,37 @@ const routes: Array<RouteConfig> = [
 ]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "history", // <----
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: Home
+    },
+    {
+      path: "/details/:id",
+      name: "details",
+      component: Details,
+      props: true
+    },
+    {
+      path: "/categories",
+      name: "categories",
+      component: Categories
+    },
+    {
+      path: "/categories/:names",
+      name: "catMeals",
+      component: CatMeals,
+      props: true
+    },
+    {
+      path: "/randomizer",
+      name: "randomizer",
+      component: Randomizer
+    }
+  ],
   base: process.env.BASE_URL,
-  routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition

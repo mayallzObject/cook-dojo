@@ -3,9 +3,8 @@
     <Navigation />
 
     <Header />
-    <transition name="slide-fade" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view />
+
     <footer class="footer">
       <div class="row">
         <Footer />
