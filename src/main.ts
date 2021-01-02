@@ -8,21 +8,21 @@ import "@/sass/main.scss"
 
 Vue.config.productionTip = false
 
-// const requireComponent = require.context(
-//   "./components",
-//   false,
-//   /Base[A-Z]\w+\.(vue|js)$/
-// )
+const requireComponent = require.context(
+  "./components",
+  false,
+  /Base[A-Z]\w+\.(vue|ts)$/
+)
 
-// requireComponent.keys().forEach(fileName => {
-//   const componentConfig = requireComponent(fileName)
+requireComponent.keys().forEach(fileName => {
+  const componentConfig = requireComponent(fileName)
 
-//   const componentName = upperFirst(
-//     camelCase(fileName.replace(/^\.\/(.*)\.\w+$/, "$1"))
-//   )
+  const componentName = upperFirst(
+    camelCase(fileName.replace(/^\.\/(.*)\.\w+$/, "$1"))
+  )
 
-//   Vue.component(componentName, componentConfig.default || componentConfig)
-// })
+  Vue.component(componentName, componentConfig.default || componentConfig)
+})
 
 new Vue({
   router,

@@ -15,35 +15,35 @@ Vue.use(VueRouter)
 //     import(/* webpackChunkName: "view-[request]" */ `@/views/${view}.vue`)
 // }
 
-const routes: Array<RouteConfig> = [
-  {
-    path: "/",
-    name: "home",
-    component: Home
-  },
-  {
-    path: "/details/:id",
-    name: "details",
-    component: Details,
-    props: true
-  },
-  {
-    path: "/categories",
-    name: "categories",
-    component: Categories
-  },
-  {
-    path: "/categories/:names",
-    name: "catMeals",
-    component: CatMeals,
-    props: true
-  },
-  {
-    path: "/randomizer",
-    name: "randomizer",
-    component: Randomizer
-  }
-]
+// const routes: Array<RouteConfig> = [
+//   {
+//     path: "/",
+//     name: "home",
+//     component: Home
+//   },
+//   {
+//     path: "/details/:id",
+//     name: "details",
+//     component: Details,
+//     props: true
+//   },
+//   {
+//     path: "/categories",
+//     name: "categories",
+//     component: Categories
+//   },
+//   {
+//     path: "/categories/:names",
+//     name: "catMeals",
+//     component: CatMeals,
+//     props: true
+//   },
+//   {
+//     path: "/randomizer",
+//     name: "randomizer",
+//     component: Randomizer
+//   }
+// ]
 
 const router = new VueRouter({
   mode: "history", // <----
@@ -76,7 +76,7 @@ const router = new VueRouter({
       component: Randomizer
     }
   ],
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
