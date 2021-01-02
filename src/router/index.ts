@@ -45,7 +45,7 @@ const routes: Array<RouteConfig> = [
 ]
 
 const router = new VueRouter({
-  // mode: "history", // <----
+  mode: "history", // <----
   routes,
   base: process.env.BASE_URL,
   scrollBehavior(to, from, savedPosition) {
